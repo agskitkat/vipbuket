@@ -1,0 +1,61 @@
+.mobile-check-best {
+  padding: 0 20px;
+  padding-top:35px;
+  li {
+    background-image: url("../images/svg/check-box.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left:25px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom:10px;
+    height:16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-check-best {
+    padding: 0px 20px;
+    padding-top:35px;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      background-image: url("../images/svg/check-box.svg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      padding-left:0px;
+      padding-top: 60px;
+      height:100px;
+      width:110px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 19px;
+      color: #000000;
+    }
+    li:nth-child(1) {
+      background-image: url("../images/svg/check-list-clock.svg");
+    }
+    li:nth-child(2) {
+      background-image: url("../images/svg/check-list-delivery.svg");
+    }
+    li:nth-child(3) {
+      background-image: url("../images/svg/menu-buket.svg");
+    }
+    li:nth-child(4) {
+      background-image: url("../images/svg/check-list-target.svg");
+    }
+    li:nth-child(5) {
+      background-image: url("../images/svg/check-list-good.svg");
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-check-best {
+    padding: 0px;
+    padding-top:35px;
+  }
+}

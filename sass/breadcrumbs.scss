@@ -1,0 +1,26 @@
+.breadcrumbs {
+  padding: 10px 20px;
+  display:flex;
+  flex-wrap: wrap;
+  a {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    text-decoration: none;
+  }
+  a:after {
+    margin:0 5px;
+    content:">";
+  }
+  a:last-child:after {
+    content:"";
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .breadcrumbs {
+    padding: 10px 0px;
+  }
+}

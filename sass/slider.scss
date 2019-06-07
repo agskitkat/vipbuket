@@ -1,0 +1,45 @@
+.slide {
+  height:200px;
+  background: #ECF9FE;
+  .container {
+    position:relative;
+    .text {
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: bold;
+      position:absolute;
+      top:60px;
+      left:20px;
+    }
+    .image {
+      float:right;
+      position:absolute;
+      right:0px;
+      top:0px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .slide {
+    height:250px;
+    overflow: hidden;
+    .container {
+      position:relative;
+      .text {
+        font-size: 36px;
+        line-height: 49px;
+        font-weight: bold;
+        position:absolute;
+        top:60px;
+        left:40px;
+      }
+      .image {
+        float:right;
+        position:absolute;
+        right:18%;
+        top:0px;
+      }
+    }
+  }
+}
