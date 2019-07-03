@@ -52,11 +52,10 @@
   .good-category {
 
     .header {
-
+      padding-bottom:12px;
     }
     .category-filter {
-      padding-top:12px;
-      padding-bottom:30px;
+
       .item-filter {
         min-width:80px;
         max-width: 100%;
@@ -64,6 +63,7 @@
       }
     }
     .content-grid {
+      padding-top:30px;
       .good-wrap {
         max-width: 305px;
         width: calc(33.333% - 14px);

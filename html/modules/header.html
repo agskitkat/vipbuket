@@ -10,85 +10,250 @@
 <body>
 <div class="container">
     <header>
+        <div class="header__bottom-row">
+            <div class="bottom-row__block">
+                <a href="#">О компании</a>
+                <a href="#">Доставка</a>
+                <a href="#">Оплата</a>
+            </div>
+            <div class="bottom-row__block">
+                <a href="#">Скидки</a>
+                <a href="#">Новинки</a>
+                <a href="#">Хит продаж</a>
+            </div>
+            <div class="bottom-row__block">
+                <a href="#">Блок</a>
+            </div>
+            <div class="bottom-row__block">
+                <a href="mailto:info@vipbouquet.ru">info@vipbouquet.ru</a>
+            </div>
+        </div>
+
         <div class="block-1">
             <div class="mobile">
                 <div class="logo">vipbouquet.ru</div>
             </div>
             <div class="menu-phone">
-                <div class="menu">
+                <div class="menu js-event-click-view-menu">
                     <img data-src="images/svg/menu-button.svg" data-srcset="images/svg/menu-button.svg 0w">
                 </div>
                 <div class="phone">
+                    <div class="phones">
+                    <a href="tel:84950051847" class="desctop-phone">8(495)005-18-47</a>
                     <a href="tel:84993470797">8(499)347-07-97</a>
-                    <span class="work-time">по будням 09:00-18:00</span>
+                    </div>
+                    <span class="work-time">
+                        <span class="week">ежедневно</span>
+                        09:00-18:00
+                    </span>
                 </div>
+
             </div>
-        </div>
-
-        <div class="desktop-menu">
-            <ul class="parent-category">
-                <li>
-                    <span>
-                        <img data-src="images/svg/menu-rose.svg" data-srcset="images/svg/menu-rose.svg 0w"> Цветы
-                    </span>
-                    <div class="child">
-                        <ul>
-                            <li><a href="#">Розы</a></li>
-                            <li>Тюльпаны</li>
-                            <li>Альстромерии</li>
-                            <li>Лилии</li>
-                            <li>Герберы</li>
-                            <li>Орхидеи</li>
-                            <li>Пионы</li>
-                            <li>Хризантемы</li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li>
-                    <span>
-                        <img data-src="images/svg/menu-buket.svg" data-srcset="images/svg/menu-buket.svg 0w"> Букеты
-                    </span>
-                    <div class="child">
-                        <ul>
-                            <li>Розы</li>
-                            <li>Тюльпаны</li>
-                            <li>Альстромерии</li>
-                            <li>Лилии</li>
-                            <li>Герберы</li>
-                            <li>Орхидеи</li>
-                            <li>Пионы</li>
-                            <li>Хризантемы</li>
-                        </ul>
-                    </div>
-                </li>
-
-
-                <li>
-                    <span>
-                        <img data-src="images/svg/menu-cart.svg" data-srcset="images/svg/menu-cart.svg 0w"> Корзины
-                    </span>
-                    <div class="child">
-                        <ul>
-                            <li>Розы</li>
-                            <li>Тюльпаны</li>
-                            <li>Альстромерии</li>
-                            <li>Лилии</li>
-                            <li>Герберы</li>
-                            <li>Орхидеи</li>
-                            <li>Пионы</li>
-                            <li>Хризантемы</li>
-                        </ul>
-                    </div>
-                </li>
-
-            </ul>
-
-            <div class="other-menu">
-                <a href="#">оплата</a>
-                <a href="#">доставка</a>
+            <div class="right-block">
+                <div class="search">
+                    <input type="text" class="search__input" placeholder="Поиск">
+                    <button class="search__button">
+                        <img data-src="images/svg/search-icom.svg" data-srcset="images/svg/search-icom.svg 0w">
+                    </button>
+                </div>
+                <div class="cart">
+                    <img data-src="images/svg/cart-icon.svg" data-srcset="images/svg/cart-icon.svg 0w"> Корзина
+                </div>
             </div>
         </div>
 
     </header>
+
+    <nav class="desktop-menu">
+        <ul class="parent-category">
+            <li>
+                <span>
+                    <img data-src="images/svg/menu-rose.svg" data-srcset="images/svg/menu-rose.svg 0w"> Цветы
+                </span>
+                <div class="child">
+                    <ul>
+                        <li><a href="#">Розы</a></li>
+                        <li>Тюльпаны</li>
+                        <li>Альстромерии</li>
+                        <li>Лилии</li>
+                        <li>Герберы</li>
+                        <li>Орхидеи</li>
+                        <li>Пионы</li>
+                        <li>Хризантемы</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <span>
+                    <img data-src="images/svg/menu-buket.svg" data-srcset="images/svg/menu-buket.svg 0w"> Букеты
+                </span>
+                <div class="child">
+                    <ul>
+                        <li>Розы</li>
+                        <li>Тюльпаны</li>
+                        <li>Альстромерии</li>
+                        <li>Лилии</li>
+                        <li>Герберы</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <span>
+                    <img data-src="images/svg/menu-cart.svg" data-srcset="images/svg/menu-cart.svg 0w"> Корзины
+                </span>
+                <div class="child">
+                    <ul>
+                        <li>Розы</li>
+                        <li>Тюльпаны</li>
+                    </ul>
+                </div>
+            </li>
+
+
+
+            <li>
+                <span>
+                    <img data-src="images/svg/menu-event.svg" data-srcset="images/svg/menu-event.svg 0w"> Событие
+                </span>
+                <div class="child">
+                    <ul>
+                        <li>Розы</li>
+                        <li>Тюльпаны</li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <span>
+                    <img data-src="images/svg/menu-present.svg" data-srcset="images/svg/menu-present.svg 0w"> Подарки
+                </span>
+                <div class="child">
+                    <ul>
+                        <li>Розы</li>
+                        <li>Тюльпаны</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <span>
+                    <img data-src="images/svg/menu-wedding.svg" data-srcset="images/svg/menu-wedding.svg 0w"> Оформление свадьбы
+                </span>
+                <div class="child">
+                    <ul>
+                        <li>Розы</li>
+                        <li>Тюльпаны</li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+
+    <nav class="mobile__menu-container" id="js-target-mobile-menu">
+        <div class="mobile__menu-content">
+            <div class="mobile__menu-header">
+                Меню<img class="js-event-click-hide-menu" data-src="images/svg/menu-close.svg" data-srcset="images/svg/menu-close.svg 0w">
+            </div>
+            <div class="mobile__menu-list">
+                <ul class="parent-category">
+                    <li>
+                        <span>
+                            <img data-src="images/svg/menu-rose.svg" data-srcset="images/svg/menu-rose.svg 0w" class="img-opacity"> Цветы
+                        </span>
+                        <div class="child" id="menu-1">
+                            <img  data-src="images/svg/menu-sub-back-arrow.svg" data-srcset="images/svg/menu-sub-back-arrow.svg 0w" class="img-opacity js-event-click-hide-sub-menu">
+                            <ul>
+                                <li><a href="#">Розы</a></li>
+                                <li>Тюльпаны</li>
+                                <li>Альстромерии</li>
+                                <li>Лилии</li>
+                                <li>Герберы</li>
+                                <li>Орхидеи</li>
+                                <li>Пионы</li>
+                                <li>Хризантемы</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>
+                            <img data-src="images/svg/menu-buket.svg" data-srcset="images/svg/menu-buket.svg 0w" class="img-opacity"> Букеты
+                        </span>
+                        <div class="child" id="menu-2">
+                            <img  data-src="images/svg/menu-sub-back-arrow.svg" data-srcset="images/svg/menu-sub-back-arrow.svg 0w" class="img-opacity js-event-click-hide-sub-menu">
+                            <ul>
+                                <li>Розы</li>
+                                <li>Тюльпаны</li>
+                                <li>Альстромерии</li>
+                                <li>Лилии</li>
+                                <li>Герберы</li>
+                                <li>Орхидеи</li>
+                                <li>Пионы</li>
+                                <li>Хризантемы</li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <span>
+                            <img data-src="images/svg/menu-cart.svg" data-srcset="images/svg/menu-cart.svg 0w" class="img-opacity"> Корзины
+                        </span>
+                        <div class="child" id="menu-3">
+                            <img  data-src="images/svg/menu-sub-back-arrow.svg" data-srcset="images/svg/menu-sub-back-arrow.svg 0w" class="img-opacity js-event-click-hide-sub-menu">
+                            <ul>
+                                <li>Розы</li>
+                                <li>Тюльпаны</li>
+                                <li>Альстромерии</li>
+                                <li>Лилии</li>
+                                <li>Герберы</li>
+                                <li>Орхидеи</li>
+                                <li>Пионы</li>
+                                <li>Хризантемы</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="tablet-menu">
+        <div class="menu">
+            <img class="js-event-click-view-menu" data-src="images/svg/menu-button.svg" data-srcset="images/svg/menu-button.svg 0w"> Меню
+        </div>
+        <div class="parent-category">
+            <div class="mobile__menu-header">
+                <img data-src="images/svg/menu-close.svg" data-srcset="images/svg/menu-close.svg 0w">
+            </div>
+            <div class="parent-category__left">
+                <span id="menu-hover-1">
+                    <img data-src="images/svg/menu-rose.svg" data-srcset="images/svg/menu-rose.svg 0w"> Цветы
+                </span>
+                <span id="menu-hover-2">
+                    <img data-src="images/svg/menu-buket.svg" data-srcset="images/svg/menu-buket.svg 0w"> Букеты
+                </span>
+                <span id="menu-hover-3">
+                    <img data-src="images/svg/menu-cart.svg" data-srcset="images/svg/menu-cart.svg 0w"> Корзины
+                </span>
+                <span id="menu-hover-4">
+                    <img data-src="images/svg/menu-event.svg" data-srcset="images/svg/menu-event.svg 0w"> Событие
+                </span>
+                <span id="menu-hover-5">
+                    <img data-src="images/svg/menu-present.svg" data-srcset="images/svg/menu-present.svg 0w"> Подарки
+                </span>
+                <span id="menu-hover-6">
+                    <img data-src="images/svg/menu-wedding.svg" data-srcset="images/svg/menu-wedding.svg 0w"> Оформление свадьбы
+                </span>
+            </div>
+            <div class="parent-category__right">
+                <>
+            </div>
+        </div>
+    </nav>
 </div>
