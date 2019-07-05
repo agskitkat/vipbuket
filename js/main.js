@@ -31,14 +31,9 @@ $(function(){
         $(".good-wrap.open").css({"margin-bottom":""}).removeClass("open").find(".expend.open").removeClass("open");
     });
 
-    $(".form-block .close, .form-order").click(function(e) {
-        e.stopPropagation();
-        $(this).closest(".form-order").addClass("hide").removeClass("active");;
-    });
 
-    $(".form-order .form-block").click(function(e) {
-        e.stopPropagation();
-    });
+    new SimpleBar($('.js-target-simplebar')[0]);
+
 
     $(".to-cart").click(function() {
         var element = $(this).closest(".good");
@@ -47,15 +42,45 @@ $(function(){
         var article = $.trim(element.find(".article").html());
         var price = element.find(".price").html();
         var oldprice = element.find(".old-price").html();
+        var img = element.find(".image img").attr("src");
 
         $(".form-order .name").html(name);
         $(".form-order .article-price .article").html(article);
         $(".form-order .article-price .old").html(oldprice);
         $(".form-order .article-price .new").html(price);
+        $(".form-order input.image").val(img);
 
         $(".form-order").removeClass("hide").addClass("active");
     });
 
+    $(".js-target-view-video").click(function(){
+        var dataVideo = $(this).attr("data-video");
+        var content = "";
 
+        if(dataVideo) {
+            if(dataVideo.indexOf('youtube') !== -1 ) {
+                console.log("Youtube " + dataVideo);
+                content = '<iframe src="'+dataVideo+'">\n' +
+                    '    Ваш браузер не поддерживает плавающие фреймы!\n' +
+                    ' </iframe>';
+            } else {
+                console.log("Native " + dataVideo);
+                content = '<video src="'+dataVideo+'" autoplay></video>';
+            }
+            $(".modal-container.video").show().css({display: "flex"}).find(".modal-content").html(content);
+        }
+    });
+
+    $(".modal-container").click(function(e){
+        $(this).hide();
+        if($(this).is(".video")) {
+            $(this).find(".modal-content").html("");
+        }
+    });
+
+    $(".modal-container .modal-content").click(function(e){
+        //$(this).html(" ");
+        e.stopPropagation();
+    });
 
 });

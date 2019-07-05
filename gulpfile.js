@@ -42,7 +42,6 @@ gulp.task('sass:watch', function () {
 
 
 
-
 gulp.task('js', function () {
     gulp.src(['js/libs/*.js', 'js/*.js'])
         .pipe(uglify().on('error', function(e){

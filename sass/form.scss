@@ -74,6 +74,11 @@
     .order-options {
       padding:15px 0px;
       border-bottom: 1px solid #E5E5E5;
+      .inputs {
+        .input {
+          width:100%;
+        }
+      }
       ul {
         li {
           display:flex;
@@ -116,6 +121,14 @@
           line-height: 26px;
           color: #000000;
         }
+      }
+    }
+    .errors {
+      font-size: 14px;
+      line-height: 20px;
+      span {
+        color:#FF0000;
+        font-weight: bold;
       }
     }
     .order-btn {
@@ -289,5 +302,19 @@
   }
   .form-order.active {
     display:flex;
+  }
+}
+
+
+.order-complite-block {
+  max-width:300px;
+  margin: 0 auto;
+  background: #FFF;
+  padding:20px;
+  text-align: center;
+  font-size:14px;
+  h3 {
+    font-size: 18px;
+    padding-bottom:20px;
   }
 }

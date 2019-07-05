@@ -1,0 +1,33 @@
+.modal-container {
+  display:none;
+  //display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,.5);
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  z-index: 2;
+  .modal-content {
+    width:90%;
+    iframe, video {
+      width:100%;
+      min-height:460px;
+      background: #000;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-container {
+    .modal-content {
+      width:768px;
+      iframe, video {
+        width:100%;
+        min-height:460px;
+      }
+    }
+  }
+}

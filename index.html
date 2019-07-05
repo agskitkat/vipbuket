@@ -51,10 +51,35 @@
             </div>
             <div class="right-block">
                 <div class="search">
-                    <input type="text" class="search__input" placeholder="Поиск">
+                    <input type="text" class="search__input js-target-live-search-input" placeholder="Поиск">
                     <button class="search__button">
                         <img data-src="images/svg/search-icom.svg" data-srcset="images/svg/search-icom.svg 0w">
                     </button>
+                    <div class="live-search">
+                        <div class="live-search__container js-target-simplebar"  data-simplebar-auto-hide>
+                            <div class="live-search__item">
+                                <img width="30" height="30" src="https://vipbouquet.ru/wp-content/uploads/2019/06/good-150x150.png" class="attachment-30x30 size-30x30 wp-post-image" alt="Розовый букет" srcset="https://vipbouquet.ru/wp-content/uploads/2019/06/good-150x150.png 150w, https://vipbouquet.ru/wp-content/uploads/2019/06/good-299x300.png 299w, https://vipbouquet.ru/wp-content/uploads/2019/06/good.png 300w" sizes="(max-width: 30px) 100vw, 30px">
+                                <div class="name">Ещё один букет</div>
+                                <button class="green-button">
+                                    <img src="https://vipbouquet.ru/wp-content/themes/your-clean-template-3/images/svg/good-cart.svg">
+                                </button>
+                            </div>
+                            <div class="live-search__item">
+                                <img width="30" height="30" src="https://vipbouquet.ru/wp-content/uploads/2019/06/good-150x150.png" class="attachment-30x30 size-30x30 wp-post-image" alt="Розовый букет" srcset="https://vipbouquet.ru/wp-content/uploads/2019/06/good-150x150.png 150w, https://vipbouquet.ru/wp-content/uploads/2019/06/good-299x300.png 299w, https://vipbouquet.ru/wp-content/uploads/2019/06/good.png 300w" sizes="(max-width: 30px) 100vw, 30px">
+                                <div class="name">Ещё один букет</div>
+                                <button class="green-button">
+                                    <img src="https://vipbouquet.ru/wp-content/themes/your-clean-template-3/images/svg/good-cart.svg">
+                                </button>
+                            </div>
+                            <div class="live-search__item">
+                                <img width="30" height="30" src="https://vipbouquet.ru/wp-content/uploads/2019/06/good-150x150.png" class="attachment-30x30 size-30x30 wp-post-image" alt="Розовый букет" srcset="https://vipbouquet.ru/wp-content/uploads/2019/06/good-150x150.png 150w, https://vipbouquet.ru/wp-content/uploads/2019/06/good-299x300.png 299w, https://vipbouquet.ru/wp-content/uploads/2019/06/good.png 300w" sizes="(max-width: 30px) 100vw, 30px">
+                                <div class="name">Ещё один букет</div>
+                                <button class="green-button">
+                                    <img src="https://vipbouquet.ru/wp-content/themes/your-clean-template-3/images/svg/good-cart.svg">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="cart">
                     <img data-src="images/svg/cart-icon.svg" data-srcset="images/svg/cart-icon.svg 0w"> Корзина
@@ -227,34 +252,6 @@
         <div class="menu">
             <img class="js-event-click-view-menu" data-src="images/svg/menu-button.svg" data-srcset="images/svg/menu-button.svg 0w"> Меню
         </div>
-        <div class="parent-category">
-            <div class="mobile__menu-header">
-                <img data-src="images/svg/menu-close.svg" data-srcset="images/svg/menu-close.svg 0w">
-            </div>
-            <div class="parent-category__left">
-                <span id="menu-hover-1">
-                    <img data-src="images/svg/menu-rose.svg" data-srcset="images/svg/menu-rose.svg 0w"> Цветы
-                </span>
-                <span id="menu-hover-2">
-                    <img data-src="images/svg/menu-buket.svg" data-srcset="images/svg/menu-buket.svg 0w"> Букеты
-                </span>
-                <span id="menu-hover-3">
-                    <img data-src="images/svg/menu-cart.svg" data-srcset="images/svg/menu-cart.svg 0w"> Корзины
-                </span>
-                <span id="menu-hover-4">
-                    <img data-src="images/svg/menu-event.svg" data-srcset="images/svg/menu-event.svg 0w"> Событие
-                </span>
-                <span id="menu-hover-5">
-                    <img data-src="images/svg/menu-present.svg" data-srcset="images/svg/menu-present.svg 0w"> Подарки
-                </span>
-                <span id="menu-hover-6">
-                    <img data-src="images/svg/menu-wedding.svg" data-srcset="images/svg/menu-wedding.svg 0w"> Оформление свадьбы
-                </span>
-            </div>
-            <div class="parent-category__right">
-                <>
-            </div>
-        </div>
     </nav>
 </div>
 
@@ -356,7 +353,7 @@
                         <div class="sale">-20%</div>
                         <div class="hit">Хит</div>
                     </div>
-                    <div class="video-desktop desktop-only">
+                    <div class="video-desktop desktop-only js-target-view-video" data-video='video/v.mov'>
                         <img data-src="images/svg/good-video.svg" data-srcset="images/svg/good-video.svg 0w">
                     </div>
                     <div class="image">
@@ -370,7 +367,7 @@
                             А2020
                         </div>
                     </div>
-                    <div class="video mobile-only">
+                    <div class="video mobile-only js-target-view-video" data-video='video/v.mov'>
                         <img data-src="images/svg/good-video.svg" data-srcset="images/svg/good-video.svg 0w"> Видео
                     </div>
                     <div class="about">
@@ -601,71 +598,83 @@
 
         <div class="content">
             <div class="header">Оформление заказа</div>
-
-            <div class="good">
-                <div class="name">
-                    Букет с розывыми тюльпанами
-                </div>
-                <div class="article-price">
-                    <div class="article">
-                        А1001
+            <form class="form__form">
+                <div class="good">
+                    <div class="name">
+                        Букет с розывыми тюльпанами
                     </div>
-                    <div class="price">
-                        <span class="old">4 590 ₽</span><span class="new">2 990 ₽</span>
+                    <div class="article-price">
+                        <div class="article">
+                            А1001
+                        </div>
+                        <div class="price">
+                            <span class="old">4 590 ₽</span><span class="new">2 990 ₽</span>
+                        </div>
+                    </div>
+                    <input type="hidden" class="image">
+                </div>
+
+                <div class="order-options">
+                    <ul>
+                        <li>
+                            <label class="container-checkbox">
+                                <input name="is_postcard" id="postcard" type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="label">Открытка с пожеланиями</span>
+                            </label>
+                            149 ₽
+                        </li>
+
+                        <li class="inputs" style="display: none;">
+                            <div class="input">
+                                <input name="postcard_text" type="text" placeholder="Введите текст">
+                            </div>
+                        </li>
+
+                        <li>
+                            <label class="container-checkbox">
+                                <input name="decoration" type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="label">Украшение для букета Топпер</span>
+                            </label>
+                            99 ₽
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="delivery-free">
+                    <span>
+                        Доставка по Москве в пределах МКАД
+                    </span>
+                    <span>
+                        Бесплатно
+                    </span>
+                </div>
+
+                <div class="inputs">
+                    <div class="input">
+                        <input name="user_name" type="text" placeholder="Имя" required>
+                    </div>
+                    <div class="input">
+                        <input name="user_phone" type="text" placeholder="Телефон" required>
+                    </div>
+                    <div class="input">
+                        <input name="user_email" type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input">
+                        <img data-src="images/svg/form-timetable.svg" data-srcset="images/svg/form-timetable.svg 0w">
+                        <input name="user_date" type="text" placeholder="Дата получения" required>
+                    </div>
+                    <div class="input">
+                        <input name="user_addr" type="text" placeholder="Адрес доставки" required>
                     </div>
                 </div>
-            </div>
+            </form>
+            <div class="errors">
 
-            <div class="order-options">
-                <ul>
-                    <li>
-                        <label class="container-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="label">Открытка с пожеланиями</span>
-                        </label>
-                        149 ₽
-                    </li>
-                    <li>
-                        <label class="container-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="label">Украшение для букета Топпер</span>
-                        </label>
-                        99 ₽
-                    </li>
-                </ul>
             </div>
-
-            <div class="delivery-free">
-                <span>
-                    Доставка по Москве в пределах МКАД
-                </span>
-                <span>
-                    Бесплатно
-                </span>
-            </div>
-
-            <div class="inputs">
-                <div class="input">
-                    <input type="" placeholder="Имя">
-                </div>
-                <div class="input">
-                    <input type="" placeholder="Телефон">
-                </div>
-                <div class="input">
-                    <input type="" placeholder="Email">
-                </div>
-                <div class="input">
-                    <img data-src="images/svg/form-timetable.svg" data-srcset="images/svg/form-timetable.svg 0w"><input placeholder="Дата получения">
-                </div>
-                <div class="input">
-                    <input type="" placeholder="Адрес доставки">
-                </div>
-            </div>
-
             <div class="order-btn">
-                <button class="green-btn">Заказать</button>
+                <button id="do_order" class="green-btn">Заказать</button>
             </div>
         </div>
 

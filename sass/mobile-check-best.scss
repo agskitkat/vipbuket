@@ -20,7 +20,6 @@
     padding-top:35px;
     display: flex;
     justify-content: space-between;
-
     li {
       background-image: url("../images/svg/check-box.svg");
       background-repeat: no-repeat;
@@ -57,5 +56,17 @@
   .mobile-check-best {
     padding: 0px;
     padding-top:35px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mobile-check-best {
+    li {
+      padding-top:0px;
+      padding-left:60px;
+      background-position: left center;
+      display:flex;
+      align-items: center;
+    }
   }
 }
