@@ -4,6 +4,7 @@
 
 @media (min-width: 768px) {
   .desktop-menu {
+    border-bottom: 1px solid #E8E8E8;
     padding: 15px 20px;
     display: none;
     justify-content: space-between;
@@ -31,10 +32,13 @@
           line-height: 38px;
           color: #000000;
           text-decoration: none;
-
+          transition: color ease-in-out 0.2s;
           img {
             margin-right: 7px;
           }
+        }
+        > a:hover {
+          color:#34C700;
         }
 
         .child {
