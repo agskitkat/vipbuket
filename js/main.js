@@ -83,4 +83,15 @@ $(function(){
         e.stopPropagation();
     });
 
+
+    $(".good-category .content-grid .good-wrap .image").click(function(event) {
+        var image = $(this).find("img");
+        $("#imageView").css({"display":'flex'});
+        console.log(image);
+        $("#imageView").find(".image").attr({"src": image.attr('src')}).css({"opacity":"1"});
+    });
+
+    $("#imageView").find(".close").click(function(){
+        $("#imageView").css({"display":'none'});
+    });
 });
