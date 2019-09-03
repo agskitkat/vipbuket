@@ -25,18 +25,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>дня</find>
-      <find>dotted</find>
-      <find>height:300</find>
-      <find>mobile__menu-container</find>
-      <find>cart</find>
-      <find>throttle</find>
-      <find>search</find>
-      <find>live-search</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -106,7 +94,7 @@
       <workItem from="1565357595992" duration="2388000" />
       <workItem from="1565677755461" duration="1480000" />
       <workItem from="1567409452793" duration="1817000" />
-      <workItem from="1567491562729" duration="633000" />
+      <workItem from="1567491562729" duration="1915000" />
     </task>
     <servers />
   </component>

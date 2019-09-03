@@ -3,6 +3,9 @@ body {
   footer {
     margin-top:auto;
   }
+  &.overflow {
+    overflow: hidden;
+  }
 }
 
 .container {

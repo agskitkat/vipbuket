@@ -1,36 +1,41 @@
 .modal-container {
-  display:none;
+  display: none;
   //display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,.5);
-  position:fixed;
-  top:0px;
-  bottom:0px;
-  left:0px;
-  right:0px;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   z-index: 2;
+
   .modal-content {
     position: relative;
-    width:90%;
+    width: 90%;
+
     .close {
       position: absolute;
       top: 10px;
-      left:10px;
+      left: 10px;
     }
+
     iframe, video {
-      width:100%;
-      min-height:460px;
+      width: 100%;
+      min-height: 460px;
       background: #000;
     }
   }
+
   .modal-content.image {
-    max-width:300px;
+    max-width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
-      width:100%;
+      width: 100%;
     }
   }
 }
@@ -38,10 +43,11 @@
 @media (min-width: 768px) {
   .modal-container {
     .modal-content {
-      width:768px;
+      width: 768px;
+
       iframe, video {
-        width:100%;
-        min-height:460px;
+        width: 100%;
+        min-height: 460px;
       }
     }
   }

@@ -2,6 +2,7 @@ $(function() {
     $(".form-block .close, .form-order").click(function(e) {
         e.stopPropagation();
         $(this).closest(".form-order").addClass("hide").removeClass("active");
+        $("body").removeClass("overflow");
     });
 
     $(".form-order .form-block").click(function(e) {
