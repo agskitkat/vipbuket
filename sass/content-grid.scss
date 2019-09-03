@@ -6,6 +6,9 @@
     font-weight: bold;
     line-height: 49px;
   }
+  .category-order {
+    padding-bottom: 20px;
+  }
   .category-filter {
     display: flex;
     flex-wrap: wrap;
@@ -50,7 +53,9 @@
 
 @media (min-width: 768px) {
   .good-category {
-
+    .category-order {
+      padding-bottom: 0px;
+    }
     .header {
       padding-bottom:12px;
     }

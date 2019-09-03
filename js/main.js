@@ -41,17 +41,25 @@ $(function(){
         var name = $.trim(element.find(".name").html());
         var article = $.trim(element.find(".article").html());
         var price = element.find(".price").html();
-        var oldprice = element.find(".old-price").html();
+        var priceContainer = element.find(".old-price");
+
+        var oldPrice = ""
+        if(priceContainer.length > 0) {
+            oldPrice = priceContainer.html();
+        }
+
         var img = element.find(".image img").attr("src");
 
         $(".form-order .name").html(name);
         $(".form-order .article-price .article").html(article);
-        $(".form-order .article-price .old").html(oldprice);
+        $(".form-order .article-price .old").html(oldPrice);
         $(".form-order .article-price .new").html(price);
         $(".form-order input.image").val(img);
 
         $(".form-order").removeClass("hide").addClass("active");
     });
+
+
 
     $(".js-target-view-video").click(function(){
         var dataVideo = $(this).attr("data-video");
@@ -59,12 +67,12 @@ $(function(){
 
         if(dataVideo) {
             if(dataVideo.indexOf('youtube') !== -1 ) {
-                console.log("Youtube " + dataVideo);
+                //console.log("Youtube " + dataVideo);
                 content = '<iframe src="'+dataVideo+'">\n' +
                     '    Ваш браузер не поддерживает плавающие фреймы!\n' +
                     ' </iframe>';
             } else {
-                console.log("Native " + dataVideo);
+                //console.log("Native " + dataVideo);
                 content = '<video src="'+dataVideo+'" autoplay></video>';
             }
             $(".modal-container.video").show().css({display: "flex"}).find(".modal-content").html(content);
