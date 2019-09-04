@@ -46,8 +46,9 @@
     flex-wrap: wrap;
 
     .good-wrap {
-      width: calc(50% - 9px);
-      margin-bottom: 38px;
+      //width: calc(50% - 9px);
+      width: 100%;
+      margin-bottom: 20px;
 
       .good:nth-child(1n+2) {
 
