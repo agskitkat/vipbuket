@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aace069-140a-4d28-b503-3392d67ae49f" name="Default Changelist" comment="" />
+    <list default="true" id="2aace069-140a-4d28-b503-3392d67ae49f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/production/scripts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/production/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/font.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/font.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/good.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/good.scss" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>

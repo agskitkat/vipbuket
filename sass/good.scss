@@ -270,7 +270,9 @@
       .desktop-only {
         display:block;
       }
-
+      .video-desktop.desktop-only {
+        display:flex;
+      }
       .about {
         > span {
           cursor:pointer;
