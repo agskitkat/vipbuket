@@ -10,6 +10,7 @@ $(function() {
     });
 
     var form = $(".form-order");
+
     form.find("input#postcard").change(function(){
         var inputs = form.find('.order-options .inputs');
         if( !$(this).prop('checked')) {

@@ -8,8 +8,14 @@ $(function () {
     });
 
     $("#js-target-mobile-menu .parent-category > li ").click(function (e) {
-        var id = $(this).find(".child").attr("id");
-        window.location.hash = "menu--" + id;
+        var child = $(this).find('.child');
+        console.log(child);
+        if(child.length) {
+            var id = $(this).find(".child").attr("id");
+            window.location.hash = "menu--" + id;
+        } else {
+            window.location.href =  $(this).find("> span").attr('href');
+        }
     });
 
     $("#js-target-mobile-menu .child .js-event-click-hide-sub-menu").click(function (e) {
