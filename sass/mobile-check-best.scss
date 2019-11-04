@@ -24,6 +24,7 @@
       background-image: url("../images/svg/check-box.svg");
       background-repeat: no-repeat;
       background-position: top center;
+      background-size: 43px;
       padding-left:0px;
       padding-top: 60px;
       height:100px;
@@ -41,10 +42,10 @@
       background-image: url("../images/svg/check-list-delivery.svg");
     }
     li:nth-child(3) {
-      background-image: url("../images/svg/menu-buket.svg");
+      background-image: url("../images/svg/menu-cart.svg");
     }
     li:nth-child(4) {
-      background-image: url("../images/svg/check-list-target.svg");
+      background-image: url("../images/svg/save-money.svg");
     }
     li:nth-child(5) {
       background-image: url("../images/svg/check-list-good.svg");
