@@ -36,7 +36,11 @@ $(function () {
 
 
     $(".to-cart").click(function () {
-        var element = $(this).closest(".good");
+        addToCart(this);
+    });
+
+    function addToCart(elem) {
+        var element = $(elem).closest(".good");
 
         var name = $.trim(element.find(".name").html());
         var article = $.trim(element.find(".article").html());
@@ -58,7 +62,7 @@ $(function () {
 
         $(".form-order").removeClass("hide").addClass("active");
         $("body").addClass("overflow");
-    });
+    }
 
 
     $(".js-target-view-video").click(function () {
@@ -93,9 +97,10 @@ $(function () {
 
 
     $(".good-category .content-grid .good-wrap .image").click(function (event) {
+
         var image = $(this).find("img");
         $("#imageView").css({"display": 'flex'});
-        console.log(image);
+        console.log("#imageView call", image);
         $("#imageView").find(".image").attr({"src": image.attr('src')}).css({"opacity": "1"});
     });
 
