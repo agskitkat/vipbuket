@@ -113,6 +113,10 @@
           font-weight: bold;
         }
 
+        .price.red {
+          color: $red;
+        }
+
         .old-price {
           font-size: 14px;
           line-height: 19px;
@@ -138,10 +142,13 @@
 
       .name-line__price {
         white-space: nowrap;
-        color: $red;
+        color: #000;
         font-weight: bold;
         font-size: 16px;
         line-height: 22px;
+      }
+      .name-line__price.red {
+        color: $red;
       }
 
       .name-line__name {
@@ -186,7 +193,6 @@
         right: 45px;
         z-index: 1;
         display: block;
-        background-image: linear-gradient(to right, transparent 0%, white 80%);
         height: 19px;
         width: 60px;
         transition: width 0.25s;

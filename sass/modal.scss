@@ -47,6 +47,19 @@
       width: 100%;
     }
   }
+
+  .modal-content.good {
+    background: #FFF;
+    padding:20px;
+    width:100%;
+    .gry-line {
+      display: none;
+    }
+    .modal-order-button {
+      color: #FFF;
+      margin-top:20px;
+    }
+  }
 }
 
 @media (min-width: 768px) {
