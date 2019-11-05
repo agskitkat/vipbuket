@@ -36,6 +36,7 @@ $(function () {
 
 
     $(".to-cart").click(function () {
+        $('#imageView').css({display: "none"})
         var element = $(this).closest(".good");
 
         var name = $.trim(element.find(".name").html());
@@ -93,13 +94,68 @@ $(function () {
 
 
     $(".good-category .content-grid .good-wrap .image").click(function (event) {
-        var image = $(this).find("img");
-        $("#imageView").css({"display": 'flex'});
-        console.log(image);
-        $("#imageView").find(".image").attr({"src": image.attr('src')}).css({"opacity": "1"});
+        if(window.innerWidth < 768) {
+            var element = $(this).closest(".good");
+
+            var imageView = $("#imageView");
+
+            var name = $.trim(element.find(".name").html());
+            var article = $.trim(element.find(".article").html());
+            var price = element.find(".price").html();
+            var priceContainer = element.find(".old-price");
+            var hit = element.find(".hit") ? element.find(".hit").html() : false;
+            var sale = element.find(".sale") ? element.find(".sale").html() : false;
+
+            var oldPrice = "";
+            if (priceContainer.length > 0) {
+                oldPrice = priceContainer.html();
+            }
+
+            var img = element.find(".image img").attr("src");
+
+            imageView.find(".name").html(name);
+            imageView.find(".name-line__name").html(name);
+
+            imageView.find(".article").html(article);
+            imageView.find(".article-line__article").html(article);
+
+            imageView.find(".old-price").html(oldPrice);
+            imageView.find(".article-line__old-price").html(oldPrice);
+
+            imageView.find(".price").html(price);
+            imageView.find(".name-line__price").html(price);
+
+            if (hit) {
+                imageView.find(".hit").html(hit).show();
+            } else {
+                imageView.find(".hit").hide();
+            }
+
+            if (sale) {
+                imageView.find(".sale").html(sale).show();
+            } else {
+                imageView.find(".sale").hide();
+            }
+            imageView.css({"display": 'flex'});
+            imageView.find(".good-image").attr({"src": img}).css({"opacity": "1"});
+        } else {
+            var imageView = $("#imageView-desctop");
+            var img =  $(this).find("img").attr("src");
+            imageView.css({"display": 'flex'});
+            imageView.find(".image").attr({"src": img}).css({"opacity": "1"});
+        }
     });
 
+    $("#imageView-desctop").find(".close").click(function () {
+        $("#imageView-desctop").css({"display": 'none'});
+    });
+
+
     $("#imageView").find(".close").click(function () {
+        $("#imageView").css({"display": 'none'});
+    });
+
+    $("#imageView").find(".good-image").click(function () {
         $("#imageView").css({"display": 'none'});
     });
 });
