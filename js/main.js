@@ -110,6 +110,7 @@ $(function () {
             var name = $.trim(element.find(".name").html());
             var article = $.trim(element.find(".article").html());
             var price = element.find(".price").html();
+            var info = element.find(".expend").html();
             var priceContainer = element.find(".old-price");
             var hit = element.find(".hit") ? element.find(".hit").html() : false;
             var sale = element.find(".sale") ? element.find(".sale").html() : false;
@@ -132,6 +133,8 @@ $(function () {
 
             imageView.find(".price").html(price);
             imageView.find(".name-line__price").html(price);
+
+            imageView.find(".expend-text").html(info);
 
             if (hit) {
                 imageView.find(".hit").html(hit).show();
