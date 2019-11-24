@@ -5,8 +5,8 @@
 
   .header {
     font-weight: bold;
-    font-size: 36px;
-    line-height: 49px;
+    font-size: 25px;
+
   }
 
   p {
@@ -14,5 +14,14 @@
     font-size: 14px;
     line-height: 19px;
     color: #000000;
+  }
+}
+
+@media (min-width: 768px) {
+  .seotext {
+    .header {
+      font-size: 36px;
+      line-height: 49px;
+    }
   }
 }

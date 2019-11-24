@@ -40,7 +40,15 @@ header {
         color: #1C1C1C;
         font-weight: normal;
         font-size:13px;
-        margin-right:10px;
+        margin:0px 10px;
+        white-space: nowrap;
+      }
+      a:last-of-type {
+        text-align: right;
+        margin-right: 0px;
+        span {
+          display: block;
+        }
       }
       .work-time {
         display: none;
@@ -137,11 +145,19 @@ header {
             font-size: 16px;
             margin:0px;
           }
+          a:last-child {
+            margin:0px;
+            margin-top: 10px;
+            text-align: center;
+
+          }
           .work-time {
             font-weight: bold;
             margin-left:11px;
             display:flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
             .week {
               font-weight: normal;
             }
