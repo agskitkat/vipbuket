@@ -28,7 +28,11 @@ $(function () {
     });
 
     $("body").click(function (e) {
-        $(".good-wrap.open").css({"margin-bottom": ""}).removeClass("open").find(".expend.open").removeClass("open");
+        $(".good-wrap.open")
+            .css({"margin-bottom": ""})
+            .removeClass("open")
+            .find(".expend.open")
+            .removeClass("open");
     });
 
 
@@ -36,6 +40,7 @@ $(function () {
 
 
     $(".to-cart").click(function () {
+        console.log("Add to cart");
         var element = $(this).closest(".good");
 
         var name = $.trim(element.find(".name").html());
@@ -56,12 +61,14 @@ $(function () {
         $(".form-order .article-price .new").html(price);
         $(".form-order input.image").val(img);
 
+        $("#imageView").removeClass("active").addClass("hide").hide();
         $(".form-order").removeClass("hide").addClass("active");
         $("body").addClass("overflow");
     });
 
 
     $(".js-target-view-video").click(function () {
+        console.log("Video view");
         var dataVideo = $(this).attr("data-video");
         var content = "";
 
@@ -80,7 +87,9 @@ $(function () {
     });
 
     $(".modal-container").click(function (e) {
+        console.log("modal-container");
         $(this).hide();
+        $("body").removeClass("overflow");
         if ($(this).is(".video")) {
             $(this).find(".modal-content").html("");
         }
@@ -93,13 +102,57 @@ $(function () {
 
 
     $(".good-category .content-grid .good-wrap .image").click(function (event) {
+        console.log("Grid image click");
+
+        var element = $(this).closest(".good-wrap");
+
+        var name = $.trim(element.find(".name").html());
+        var article = $.trim(element.find(".article").html());
+        var price = element.find(".price").html();
+        var oldPrice = element.find(".old-price").html();
+        var sale = element.find(".sale").html();
+        var hit = element.find(".hit");
+        var content = element.find(".content").html();
         var image = $(this).find("img");
-        $("#imageView").css({"display": 'flex'});
-        console.log(image);
-        $("#imageView").find(".image").attr({"src": image.attr('src')}).css({"opacity": "1"});
+
+        var imageView = $("#imageView");
+
+        console.log(name, image.attr('src'));
+
+        imageView.find(".js-name").html(name);
+        imageView.find(".js-article").html(article);
+        imageView.find(".js-old-price").html(oldPrice);
+        imageView.find(".js-price").html(price);
+        imageView.find(".js-content").html(content);
+
+        if(sale) {
+            imageView.find(".js-sale").show().html(sale);
+        } else {
+            imageView.find(".js-sale").hide();
+        }
+
+        if(hit.length) {
+            imageView.find(".js-hit").show();
+        } else {
+            imageView.find(".js-hit").hide();
+        }
+
+        imageView.find(".js-image").attr({"src": image.attr('src')}).css({"opacity": "1"});
+
+
+        if(window.innerWidth < 768) {
+            $("#imageView").css({"display": 'flex'});
+            $("body").addClass("overflow");
+        } else {
+            $("#imageView-desctop").css({"display": 'flex'});
+            $("body").addClass("overflow");
+            $("#imageView-desctop").find(".image").attr({"src": image.attr('src')}).css({"opacity": "1"});
+        }
     });
 
-    $("#imageView").find(".close").click(function () {
-        $("#imageView").css({"display": 'none'});
+    $(".modal-container").find(".close").click(function () {
+        console.log("imageView");
+        $(this).closest(".modal-container").css({"display": 'none'});
+        $("body").removeClass("overflow");
     });
 });

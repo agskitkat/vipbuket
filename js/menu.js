@@ -9,6 +9,12 @@ $(function () {
 
     $("#js-target-mobile-menu .parent-category > li ").click(function (e) {
         var id = $(this).find(".child").attr("id");
+
+        if(!id) {
+            window.location.href = $(this).find('span').attr('href');
+            return false;
+        }
+
         window.location.hash = "menu--" + id;
     });
 
@@ -25,6 +31,7 @@ $(function () {
         if (arH.length === 2) {
             var id = arH[1];
             console.log(id);
+
             if (id === "open" || id === "level-close") {
                 console.log("OPEN");
                 $("#js-target-mobile-menu").addClass("open");
