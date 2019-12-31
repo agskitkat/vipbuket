@@ -36,7 +36,7 @@ $(function () {
     });
 
 
-    new SimpleBar($('.js-target-simplebar')[0]);
+    //SimpleBar($('.js-target-simplebar')[0]);
 
 
     $(".to-cart").click(function () {
@@ -52,6 +52,8 @@ $(function () {
         if (priceContainer.length > 0) {
             oldPrice = priceContainer.html();
         }
+
+        document.body.setAttribute("","")
 
         var img = element.find(".image img").attr("src");
 
