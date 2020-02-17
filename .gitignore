@@ -6,3 +6,5 @@ node_modules/
 .idea/workspace.xml
 .idea/workspace.xml
 production/_style.min.css
+production/style.min.css
+production/scripts.min.js

@@ -6,7 +6,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
 var rigger = require('gulp-rigger');
-
+var autoprefixer = require('gulp-autoprefixer');
 
 
 var browserSync = require('browser-sync');
@@ -28,12 +28,12 @@ gulp.task('browser-sync', function(done) {
 gulp.task('sass', function (done) {
     gulp.src(['sass/import.scss'])
         .pipe(sass().on('error', sass.logError))
-        .pipe(concat('styles.min.css'))
+        .pipe(autoprefixer("last 50 versions", "ie >= 9"))
+        .pipe(concat('style.min.css'))
         .pipe(minifyCSS({
             keepBreaks: false
         }))
-        .pipe(gulp.dest('production'))
-        .pipe(reload({stream:true}));
+        .pipe(gulp.dest('production'));
     done();
 });
 

@@ -6,26 +6,14 @@
       <change beforePath="$PROJECT_DIR$/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empty.html" beforeDir="false" afterPath="$PROJECT_DIR$/empty.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/modules/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/modules/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/modules/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/modules/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/modules/header_l&amp;b.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/modules/header_l&amp;b.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/svg/good-sale-bg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/svg/good-sale-bg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/production/scripts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/style.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/cart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/font.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/font.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/good.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/good.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/import.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/import.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/styles.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/production/styles.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/single.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +41,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1PBpxx0C6desMLlCKsKgn6H5nzX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -152,21 +143,21 @@
       <screen x="1920" y="-833" width="1080" height="1890" />
     </state>
     <state x="2240" y="-133" key="FileChooserDialogImpl/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581925084915" />
-    <state width="1037" height="562" key="GridCell.Tab.0.bottom" timestamp="1581925753868">
+    <state width="1037" height="562" key="GridCell.Tab.0.bottom" timestamp="1581927638735">
       <screen x="1920" y="-833" width="1080" height="1890" />
     </state>
-    <state width="1037" height="562" key="GridCell.Tab.0.bottom/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581925753868" />
-    <state width="1037" height="562" key="GridCell.Tab.0.center" timestamp="1581925753868">
+    <state width="1037" height="562" key="GridCell.Tab.0.bottom/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581927638735" />
+    <state width="1037" height="562" key="GridCell.Tab.0.center" timestamp="1581927638735">
       <screen x="1920" y="-833" width="1080" height="1890" />
     </state>
-    <state width="1037" height="562" key="GridCell.Tab.0.center/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581925753868" />
-    <state width="1037" height="562" key="GridCell.Tab.0.left" timestamp="1581925753867">
+    <state width="1037" height="562" key="GridCell.Tab.0.center/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581927638735" />
+    <state width="1037" height="562" key="GridCell.Tab.0.left" timestamp="1581927638735">
       <screen x="1920" y="-833" width="1080" height="1890" />
     </state>
-    <state width="1037" height="562" key="GridCell.Tab.0.left/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581925753867" />
-    <state width="1037" height="562" key="GridCell.Tab.0.right" timestamp="1581925753868">
+    <state width="1037" height="562" key="GridCell.Tab.0.left/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581927638735" />
+    <state width="1037" height="562" key="GridCell.Tab.0.right" timestamp="1581927638735">
       <screen x="1920" y="-833" width="1080" height="1890" />
     </state>
-    <state width="1037" height="562" key="GridCell.Tab.0.right/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581925753868" />
+    <state width="1037" height="562" key="GridCell.Tab.0.right/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581927638735" />
   </component>
 </project>
