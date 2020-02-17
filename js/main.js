@@ -41,19 +41,35 @@ $(function () {
 
     $(".to-cart").click(function () {
         console.log("Add to cart");
+
         var element = $(this).closest(".good");
+        console.log(element);
+        if(element.length) {
 
-        var name = $.trim(element.find(".name").html());
-        var article = $.trim(element.find(".article").html());
-        var price = element.find(".price").html();
-        var priceContainer = element.find(".old-price");
+            var name = $.trim(element.find(".name").html());
+            var article = $.trim(element.find(".article").html());
+            var price = element.find(".price").html();
+            var priceContainer = element.find(".old-price");
+            var oldPrice = "";
+            if (priceContainer.length > 0) {
+                oldPrice = priceContainer.html();
+            }
 
-        var oldPrice = "";
-        if (priceContainer.length > 0) {
-            oldPrice = priceContainer.html();
+        } else {
+
+            var element = $(this).closest(".full-good");
+            console.log("Second", element);
+            var name = $.trim(element.find(".good-title").html());
+            var article = $.trim(element.find(".good-article").html());
+            var price = $.trim(element.find(".good-price").html());
+            var priceContainer = element.find(".good-old-price");
+            var oldPrice = "";
+            if(priceContainer.length > 0) {
+                oldPrice = priceContainer.html();
+            }
+
         }
-
-        document.body.setAttribute("","")
+        //document.body.setAttribute("","");
 
         var img = element.find(".image img").attr("src");
 
@@ -66,6 +82,7 @@ $(function () {
         $("#imageView").removeClass("active").addClass("hide").hide();
         $(".form-order").removeClass("hide").addClass("active");
         $("body").addClass("overflow");
+
     });
 
 
@@ -101,7 +118,6 @@ $(function () {
         //$(this).html(" ");
         e.stopPropagation();
     });
-
 
     $(".good-category .content-grid .good-wrap .image").click(function (event) {
         console.log("Grid image click");
@@ -146,9 +162,9 @@ $(function () {
             $("#imageView").css({"display": 'flex'});
             $("body").addClass("overflow");
         } else {
-            $("#imageView-desctop").css({"display": 'flex'});
-            $("body").addClass("overflow");
-            $("#imageView-desctop").find(".image").attr({"src": image.attr('src')}).css({"opacity": "1"});
+           // $("#imageView-desctop").css({"display": 'flex'});
+           // $("body").addClass("overflow");
+           // $("#imageView-desctop").find(".image").attr({"src": image.attr('src')}).css({"opacity": "1"});
         }
     });
 

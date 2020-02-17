@@ -26,7 +26,10 @@ $(function() {
 
     var lock = false;
     var old_button_text = "";
-    form.find("#do_order").click(function(event){
+
+
+    form.find("#do_order").click(function(event) {
+
         event.preventDefault();
         event.stopPropagation();
         var btn = $(this);

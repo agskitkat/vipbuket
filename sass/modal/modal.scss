@@ -1,0 +1,36 @@
+.s-modal {
+  //display: flex; // none
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right:0px;
+  bottom: 0px;
+  background: rgba(0,0,0,.8);
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+  .s-modal-content {
+    background: #FFF;
+    width: 280px;
+    height: 460px;
+    position: relative;
+  }
+  .s-modal-close {
+    position: absolute;
+    right: 10px;
+    top:10px;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-image: url("../images/svg/form-close.svg");
+  }
+}
+
+.s-modal.visible {
+  display: flex;
+}
+
+.s-modal.hide {
+  display: none;
+}

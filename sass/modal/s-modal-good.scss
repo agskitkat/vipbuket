@@ -1,0 +1,81 @@
+.s-modal-good {
+  padding: 20px;
+
+  .header {
+    width: 200px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .info-block-layout {
+    display: flex;
+    .image {
+      margin-right: 20px;
+      img {
+        margin-top: 8px;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .info {
+      .icons-block {
+        margin-bottom: 0px;
+      }
+      .name {
+        margin-top: 8px;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+      }
+      .article {
+        font-size: 12px;
+        line-height: 16px;
+        color: $dark-gray;
+        margin-bottom: 8px;
+      }
+      .price-block  {
+        .price {
+          color: $pink;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 24px;
+        }
+        .old-price {
+          display: inline-block;
+          font-size: 12px;
+          line-height: 12px;
+          color: $dark-gray;
+          position: relative;
+          &:after {
+            content:"";
+            height: 1px;
+            display: block;
+            background: $pink;
+            position: absolute;
+            top: 50%;
+            left:-4px;
+            right:-4px;
+          }
+        }
+      }
+    }
+  }
+
+  .good-quantity-block {
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .button-block {
+    .s-btn_second {
+      margin-bottom: 20px;
+    }
+  }
+
+}

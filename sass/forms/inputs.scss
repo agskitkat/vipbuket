@@ -1,0 +1,93 @@
+$error-color: #CF6F6F;
+
+.input-border {
+  min-height: 60px;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: 1px solid $green-mint;
+    border-radius: 5px;
+    padding:0 20px;
+    .label {
+      color: $dark-gray;
+      line-height: 16px;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    input, select {
+      display: block;
+      border: none;
+      width: 100%;
+      line-height: 16px;
+      font-size:12px;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    select {
+      -webkit-appearance: none;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+  }
+  .error-message {
+     display: none;
+  }
+}
+
+.input-border.input-border_error {
+  label {
+    border-color: $error-color;
+
+  }
+  .error-message {
+     display: block;
+     font-size: 12px;
+     line-height: 16px;
+     padding-top:4px;
+     color: $error-color;
+
+   }
+}
+
+.input-border.input-border-radio {
+  height: 100px;
+  label {
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    .label {
+      margin-top: 0px;
+      font-size: 16px;
+      line-height: 20px;
+      color:$black;
+    }
+    input[type=radio] {
+      display: none;
+    }
+  }
+  .radio {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 50%;
+    border: 1px solid #6BC48E;
+    box-sizing: border-box;
+    margin-right: 8px;
+    transition: border ease-in-out 0.2s;
+  }
+  input:checked+.radio {
+    border: 6px solid #6BC48E;
+  }
+}

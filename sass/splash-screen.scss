@@ -1,0 +1,27 @@
+.splash-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  //background: rgba(255,255,255,.2);
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+  .wheel {
+    width: 120px;
+    height: 120px;
+    img {
+      width:100%;
+      height: 100%;
+    }
+  }
+}
+
+.splash-screen.visible {
+  display: flex;
+}
+
+.splash-screen.hide {
+  display: none;
+}

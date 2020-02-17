@@ -1,0 +1,19 @@
+.dotted-sting-list {
+  .dotted-sting {
+    padding-bottom: 20px;
+  }
+  .dotted-sting {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 20px;
+    .dotted {
+      display: block;
+      box-sizing: border-box;
+      flex-grow:2;
+      margin:0 8px;
+      margin-bottom: 4px;
+      border-bottom: dotted 2px $black;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.icons-block {
+  display: flex;
+  margin-bottom: 20px;
+
+  .icon {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    margin-right: 20px;
+  }
+
+  .icon.hide {
+    display: none;
+  }
+
+  .icon__sale {
+    width: 40px;
+    background-size: cover;
+    background-image: url("../images/svg/good-sale-bg.svg");
+    background-repeat: no-repeat;
+    font-size: 10px;
+  }
+
+  .icon__new {
+    color: $green;
+    font-size: 12px;
+  }
+
+  .icon__hit {
+    color: $blue;
+    font-size: 12px;
+  }
+}

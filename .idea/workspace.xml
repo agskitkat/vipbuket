@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aace069-140a-4d28-b503-3392d67ae49f" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="2aace069-140a-4d28-b503-3392d67ae49f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empty.html" beforeDir="false" afterPath="$PROJECT_DIR$/empty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/modules/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/modules/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/modules/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/modules/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/modules/header_l&amp;b.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/modules/header_l&amp;b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/svg/good-sale-bg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/svg/good-sale-bg.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/production/scripts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/style.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/cart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/font.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/font.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/good.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/good.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/import.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/import.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/modal.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,9 +43,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="SCSS File" />
         <option value="HTML File" />
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -29,16 +53,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1PBpxx0C6desMLlCKsKgn6H5nzX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../saunanekrasovka" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -47,18 +78,6 @@
       <recent name="D:\W2\vipbuket_git\vipbuket\js\no_compress" />
       <recent name="D:\W2\vipbuket_git\vipbuket\js" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="default" type="js.build_tools.gulp" temporary="true">
@@ -98,7 +117,17 @@
       <workItem from="1567495465169" duration="12000" />
       <workItem from="1567582360342" duration="8742000" />
       <workItem from="1573731054961" duration="2263000" />
-      <workItem from="1577276242241" duration="26354000" />
+      <workItem from="1577276242241" duration="26609000" />
+      <workItem from="1578896094245" duration="2412000" />
+      <workItem from="1578915793967" duration="18648000" />
+      <workItem from="1578998819497" duration="11039000" />
+      <workItem from="1579011758643" duration="20122000" />
+      <workItem from="1579249706287" duration="5623000" />
+      <workItem from="1580112048060" duration="5532000" />
+      <workItem from="1580459915763" duration="2063000" />
+      <workItem from="1580472086045" duration="19816000" />
+      <workItem from="1580970451175" duration="37828000" />
+      <workItem from="1581924818090" duration="964000" />
     </task>
     <servers />
   </component>
@@ -117,5 +146,27 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2240" y="-133" key="FileChooserDialogImpl" timestamp="1581925084915">
+      <screen x="1920" y="-833" width="1080" height="1890" />
+    </state>
+    <state x="2240" y="-133" key="FileChooserDialogImpl/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581925084915" />
+    <state width="1037" height="562" key="GridCell.Tab.0.bottom" timestamp="1581925753868">
+      <screen x="1920" y="-833" width="1080" height="1890" />
+    </state>
+    <state width="1037" height="562" key="GridCell.Tab.0.bottom/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581925753868" />
+    <state width="1037" height="562" key="GridCell.Tab.0.center" timestamp="1581925753868">
+      <screen x="1920" y="-833" width="1080" height="1890" />
+    </state>
+    <state width="1037" height="562" key="GridCell.Tab.0.center/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581925753868" />
+    <state width="1037" height="562" key="GridCell.Tab.0.left" timestamp="1581925753867">
+      <screen x="1920" y="-833" width="1080" height="1890" />
+    </state>
+    <state width="1037" height="562" key="GridCell.Tab.0.left/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581925753867" />
+    <state width="1037" height="562" key="GridCell.Tab.0.right" timestamp="1581925753868">
+      <screen x="1920" y="-833" width="1080" height="1890" />
+    </state>
+    <state width="1037" height="562" key="GridCell.Tab.0.right/1920.-833.1080.1890/0.0.1920.1050@1920.-833.1080.1890" timestamp="1581925753868" />
   </component>
 </project>

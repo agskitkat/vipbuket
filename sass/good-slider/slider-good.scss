@@ -1,0 +1,45 @@
+.micro-good {
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .icons-block {
+    margin-top: 12px;
+    margin-bottom:0px;
+    justify-content: space-between;
+    .icon {
+      white-space: nowrap;
+      margin-right: 0px;
+    }
+  }
+
+  .good-title {
+    display: block;
+    margin-top: 4px;
+    margin-bottom:8px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .good-price-block {
+    margin-bottom: 8px;
+    .good-price {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    .good-old-price {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 4px;
+    }
+  }
+
+  .good-add-to-cart {
+    font-weight: bold;
+    font-size: 14px;
+  }
+}

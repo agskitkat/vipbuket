@@ -1,0 +1,31 @@
+.good-quantity-block {
+  width: 116px;
+  .quantity-header {
+    margin-bottom: 4px;
+  }
+  .quantity-header, .quantity-price-item {
+    font-size: 12px;
+    line-height: 16px;
+    color: $dark-gray;
+    text-align: center;
+  }
+  .quantity-price-item {
+    margin-top: 8px;
+    font-weight: bold;
+    color: $black;
+  }
+  .quantity-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    button {
+      padding: 0px;
+    }
+  }
+  .quantity-number {
+    color: $black;
+    line-height: 40px;
+    min-width: 36px;
+    text-align: center;
+  }
+}

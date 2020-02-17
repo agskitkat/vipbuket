@@ -1,0 +1,47 @@
+$grid-base: 4;
+$name: "slider-static-width";
+$slider-static-width:(
+  "" : (
+    "slider-background": #FFF,
+    "slide-width": 50,
+    "spaceing" : 5
+  ),
+  "second":(
+    "slider-background": #FFF,
+    "slide-width": 50,
+    "spaceing" : 5
+  )
+);
+$styles: map-get($slider-static-width,"");
+/*
+  Дефолтный стиль
+*/
+.#{$name} {
+  box-sizing: border-box;
+  background-color: map-get($styles, "slider-background");
+  .slider-slide {
+    padding-left: map-get($styles, "spaceing") * $grid-base + px;
+  }
+  .slide-content {
+    min-height: 100px;
+    width:  map-get($styles, "slide-width") * $grid-base + px;
+  }
+}
+
+/*
+  В субклассе оставляем только изменения
+*/
+@each $class, $styles in $slider-static-width {
+  @if($class != "") {
+    .#{$name}.#{$class} {
+      background-color: map-get($styles, "slider-background");
+      .slider-slide {
+        padding-left: map-get($styles, "spaceing") * $grid-base + px;
+      }
+      .slide-content {
+        width:  map-get($styles, "slide-width") * $grid-base + px;
+      }
+    }
+  }
+}
+

@@ -1,105 +1,43 @@
 //= modules/header.html
-<div class="cart">
-    <span class="cart__header">В корзине <span id="js-t-cart-header-items-count">4 товара</span></span>
-    <div class="cart__layout">
-        <div class="cart__items">
+<br>
+<br>
+<br>
 
-            <div class="item_cart">
-                <div class="item__layout">
+<div class="container">
+    <div class="cart">
+        <span class="cart__header">В корзине <span id="js-t-cart-header-items-count">4 товара</span></span>
+        <div class="cart__layout">
+            <div class="cart__items">
 
-                    <div class="item__image">
+                //= cart/good-item.html
+                //= cart/good-item.html
+                //= cart/good-item.html
 
-                        <img data-src="images/good/good-2.png" data-srcset="images/good/good-2.png">
-                    </div>
-
-                    <div class="item__text">
-
-                        <div class="item__icon-block">
-                            <div class="item__icon">
-                                -20%
-                            </div>
-                        </div>
-
-                        <div class="flex-desktop">
-                            <div class="flex-tablet">
-                                <div class="item__price prices">
-                                    <div class="price_actual">
-                                        11 000 ₽
-                                    </div>
-                                    <div class="price_old-price">
-                                        22 690 ₽
-                                    </div>
-                                </div>
-
-                                <div class="flex-table__column">
-                                    <div class="item__article">
-                                        А1211
-                                    </div>
-                                    <div class="item__name">
-                                        Вкусный букет из фруктов и роз «Красный бархат»
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="item__quantity-block">
-                                <div class="quantity-block__control">
-                                    <div class="quantity-block__measure">Кол-во шт.</div>
-                                    <div class="flex">
-                                        <div class="button decrement">-</div>
-                                        <div class="view-quantity">
-                                            10
-                                        </div>
-                                        <div class="button increment">+</div>
-                                    </div>
-                                    <div class="price-by-one">
-                                        900 руб. /<span class="measure">шт.</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item__price prices display-desktop">
-                                <div class="price_actual">
-                                    11 000 ₽
-                                </div>
-                                <div class="price_old-price">
-                                    22 690 ₽
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="item__remove">
-                        <img data-srcset="images/svg/cart-item-remove.svg" data-src="images/svg/cart-item-remove.svg" alt="">
-                    </div>
-
-                </div>
             </div>
-
-        </div>
-        <div class="cart__summary">
-            <div class="summary__border">
-                <div class="flex-row">
-                    <span>Товары (4)</span>
-                    <span>510 000 ₽</span>
+            <div class="cart__summary"> 
+                <div class="summary__border">
+                    <div class="flex-row">
+                        <span>Товары (4)</span>
+                        <span>510 000 ₽</span>
+                    </div>
+                    <div class="flex-row">
+                        <span>Скидка на товары</span>
+                        <span class="red">-25 526 ₽</span>
+                    </div>
+                    <div class="flex-row">
+                        <span>Доставка по Москве</span>
+                        <span class="red">299 ₽</span>
+                    </div>
+                    <div class="summary__line"></div>
+                    <div class="flex-row flex-row__end">
+                        <span>Итого</span>
+                        <span class="price">485 000 ₽</span>
+                    </div>
                 </div>
-                <div class="flex-row">
-                    <span>Скидка на товары</span>
-                    <span class="red">-25 526 ₽</span>
-                </div>
-                <div class="flex-row">
-                    <span>Доставка по Москве</span>
-                    <span class="red">299 ₽</span>
-                </div>
-                <div class="summary__line"></div>
-                <div class="flex-row flex-row__end">
-                    <span>Итого</span>
-                    <span class="price">485 000 ₽</span>
-                </div>
+                <div class="summary__button">Перейти к оформлению</div>
             </div>
-            <div class="summary__button">Перейти к оформлению</div>
         </div>
     </div>
 </div>
+
 //= modules/footer.html

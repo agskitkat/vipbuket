@@ -1,5 +1,7 @@
 body {
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   footer {
     margin-top:auto;
   }
@@ -16,6 +18,18 @@ body {
 
 @media (min-width: 1440px) {
   .container {
+    max-width:1170px;
+  }
+}
+
+
+.container-alpha {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container-alpha {
     max-width:1170px;
   }
 }
