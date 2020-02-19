@@ -1,0 +1,34 @@
+.subcategory {
+  height: 100px;
+  background: $gray;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  .image {
+    display: flex;
+    align-items: center;
+    padding-left:40px;
+    padding-right: 12px;
+    img {
+      height: 100px;
+      width: auto;
+    }
+  }
+  .text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left:12px;
+  }
+}
+
+@media (min-width: 360px) {
+  .subcategory {
+
+  }
+}

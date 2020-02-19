@@ -1,0 +1,62 @@
+.sort-block {
+  font-size: 12px;
+  line-height: 18px;
+  .sort {
+    background: #FFF;
+    height: 40px;
+    width: 120px;
+    border: 1px solid #1C1C1C;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sort-hidden {
+      display: none;
+      position: absolute;
+    }
+  }
+  .sort:hover {
+    .sort-hidden {
+      z-index: 2;
+      white-space: nowrap;
+      background: #FFF;
+      border: 1px solid #1C1C1C;
+      display: block;
+      top: 40px;
+      left: -1px;
+      right:-1px;
+      a {
+        text-decoration: none;
+        height:40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $black;
+        margin: 0 20px;
+        font-size: 12px;
+        border-bottom: 1px solid $dark-gray;
+      }
+      a.active {
+        color: $blue;
+      }
+      a:after {
+        content: "";
+        height: 1px;
+        background: $dark-gray;
+        display: block;
+      }
+      a:last-of-type {
+       border:none;
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .sort-block {
+    .sort {
+      width: 140px;
+    }
+  }
+}

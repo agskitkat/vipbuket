@@ -61,7 +61,7 @@ gulp.task('clean', function() {
 gulp.task('default', gulp.series('clean','sass', 'js', 'html', 'browser-sync', (done) => {
     // Смотрим за scss
     gulp.watch(
-        ['sass/*.sass', 'sass/*/*.sass', 'sass/libs/*.*'],
+        ['sass/*.sass', 'sass/*/*.sass', 'sass/libs/*.*', 'sass/*.scss', 'sass/*/*.scss'],
         gulp.series('sass')
     );
     // Смотрим за js

@@ -159,8 +159,8 @@ $(function () {
 
 
         if(window.innerWidth < 768) {
-            $("#imageView").css({"display": 'flex'});
-            $("body").addClass("overflow");
+            //$("#imageView").css({"display": 'flex'});
+            //$("body").addClass("overflow");
         } else {
            // $("#imageView-desctop").css({"display": 'flex'});
            // $("body").addClass("overflow");

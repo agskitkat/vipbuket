@@ -38,6 +38,14 @@
     }
   }
 
+  .good-article {
+    display: none;
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    color:$dark-gray;
+  }
+
   .good-add-to-cart {
     font-weight: bold;
     font-size: 14px;
