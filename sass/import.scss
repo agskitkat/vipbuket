@@ -17,11 +17,16 @@
 
 @import "buttons/simple-button";
 
-@import "header";
-@import "header_mobile_menu";
-@import "header_desctop_menu";
+//@import "header";
+//@import "header_mobile_menu";
+//@import "header_desctop_menu";
 
 @import "header_l&b";
+@import "header/header-cart";
+@import "header/search";
+@import "header/catalog-menu";
+@import "header/catalog-descktop";
+
 @import "live-search";
 @import "simplebar";
 
@@ -45,8 +50,10 @@
 @import "good-modules/good-icons";
 @import "good-modules/good-price";
 @import "good-slider/slider-good";
+@import "good-modules/back-link";
 @import "full-good/good-quantity-block.scss";
-@import "footer";
+//@import "footer";
+@import 'lb-footer';
 @import "checkbox";
 
 @import "vitrine/vitrine-layout";

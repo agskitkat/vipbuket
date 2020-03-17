@@ -1,0 +1,77 @@
+.s-catalog-desktop {
+  display: none;
+  background-color: $gray;
+  height:600px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  .top-level {
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    color:$black;
+    height:600px;
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      color:$black;
+    }
+    li {
+      padding-left:40px;
+      height: 28px;
+      line-height: 28px;
+      a {
+        cursor: pointer;
+        width: 100%;
+
+      }
+    }
+    ul {
+      display: none;
+      width: 70%;
+      left: 30%;
+      top: 0px;
+      bottom:0px;
+      position: absolute;
+      padding:40px;
+      box-sizing: border-box;
+      z-index: 2;
+
+      justify-content: flex-start;
+      align-items: stretch;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      li {
+        width: 160px;
+        margin-right: 20px;
+        padding-left:0px;
+      }
+    }
+  }
+  .top-level {
+    > li:hover {
+      background-color: #FFF;
+      ul {
+        display: flex;
+      }
+    }
+  }
+}
+.s-catalog-desktop:after {
+  content: "";
+  background: #FFF;
+  position: absolute;
+  width: 70%;
+  left: 30%;
+  top: 0px;
+  bottom:0px;
+  z-index: 1;
+}
+
+@media (min-width: 760px) {
+  .s-catalog-desktop.open {
+    display: block;
+  }
+}

@@ -22,8 +22,16 @@ $(function () {
 
     function updateMiniCart(result) {
         var quantity = result.cart_count ? "В корзине: " + result.cart_count : "Корзина";
-        $("#mini-cart .items").html(quantity);
+        //$("#mini-cart .items").html(quantity);
+        $(".header-cart .cart-count").html(result.cart_count);
         $("#mini-cart .cart-info").html(result.sum ? "На сумму " + result.sum + " ₽": "Нет товаров в корзине" );
+
+        var cc = $("#js-cart-count");
+        if(result.cart_count > 0) {
+            $(cc).removeClass('empty').html(result.cart_count);
+        } else {
+            $(cc).addClass('empty').html("");
+        }
     }
 
     function updateCart(result) {
@@ -135,33 +143,43 @@ $(function () {
 
     // на странице одного товара (карточка товара)
     $(".js-action-add-to-cart").click(function() {
-        if(window.innerWidth < 760) {
+        var redirect = $(this).attr("data-redirect");
+
+        if(window.innerWidth < 760 && !redirect) {
             // Открыть модальное окно для добавления товара в мобиле
             openModalToAdd( $(this).attr("data-good") );
-        } else {
-            // Добавить товар
-            good = JSON.parse( $(this).attr("data-good") );
-
-            var quantity = $(this)
-                .closest(".full-good__container")
-                .find(".quantity-number")
-                .attr("data-quantity");
-
-            cartRequest({
-                action: 'addTocart',
-                method: "addition",
-                id: good.id,
-                quantity: quantity
-            })
-            .then(
-                function(result){
-
-                },
-                function (error) {
-
-                }
-            );
         }
+
+
+        // Добавить товар
+        good = JSON.parse( $(this).attr("data-good") );
+
+        var quantity = $(this)
+            .closest(".full-good__container")
+            .find(".quantity-number")
+            .attr("data-quantity");
+
+        if(!quantity) {
+            quantity = 1;
+        }
+
+        cartRequest({
+            action: 'addTocart',
+            method: "addition",
+            id: good.id,
+            quantity: quantity
+        })
+        .then(
+            function(result){
+                if(redirect) {
+                    window.location.href = redirect;
+                }
+            },
+            function (error) {
+
+            }
+        );
+
     });
 
 
@@ -226,12 +244,20 @@ $(function () {
         $("#atc-article").html(atc_article);
         $("#atc-price").html(atc_price + " ₽");
         $("#atc-one-price").html(atc_one_price + " ₽");
-        $("#atc-old-price").html(atc_old_price + " ₽");
+        $("#atc-one-price").attr({'data-one-item-price': atc_one_price});
+
+        if(atc_old_price) {
+            $("#atc-old-price").show().html(atc_old_price + " ₽");
+        } else {
+            $("#atc-old-price").hide();
+        }
+
         $("#atc-quantity").html(+atc_quantity).attr({"data-quantity":+atc_quantity});
 
         // Показываем
         showModal("add-to-cart-mobile");
     }
+
 
 
 });

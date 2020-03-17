@@ -1,0 +1,26 @@
+.header-cart {
+  position: relative;
+  .cart-count {
+    background: $green;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 45%;
+    top:10%;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    color: #FFF;
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.2s;
+    transform: scale(1);
+  }
+  .cart-count.empty {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  img {
+    width: 28px;
+  }
+}

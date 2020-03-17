@@ -1,0 +1,26 @@
+.back-link-good {
+  display: flex;
+  align-items: center;
+  padding:0 20px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  color:$blue;
+  max-width: 100%;
+  font-weight: 500;
+  padding-bottom: 12px;
+  img {
+    margin-right: 8px;
+  }
+}
+
+@media (min-width: 760px) {
+  .back-link-good {
+    font-size: 14px;
+    padding-bottom: 0px;
+    img {
+      width:8px;
+      height: 12px;
+    }
+  }
+}

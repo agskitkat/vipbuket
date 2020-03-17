@@ -39,16 +39,18 @@ $background-hover-color: #00d514;
     font-size: 14px;
 }
 
+.s-btn.s-btn_second {
+  background-color:#FFF;
+}
 .s-btn_second {
   background-color:#FFF;
   border:1px solid $green-mint;
   color: $green-mint;
-
-  &:hover {
-    background-color: $green-mint;
-    border: 1px solid $green-mint;
-    color: #FFF;
-  }
+}
+.s-btn_second:hover {
+  background-color: $green-mint;
+  border: 1px solid $green-mint;
+  color: #FFF;
 }
 
 .s-btn_control {

@@ -1,0 +1,131 @@
+.lb-footer {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #F8F8F8;
+  .lb-footer__content {
+    width: 184px;
+    margin-bottom: 60px;
+    .lb-footer__logo {
+      width:148px;
+      margin-bottom: 20px;
+    }
+    .work-time {
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 8px;
+    }
+    .phone {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 8px;
+    }
+    .lb-footer__social {
+      margin-top: 32px;
+      margin-bottom:40px;
+      .header {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom:16px;
+      }
+      .social__images {
+        display: flex;
+        img {
+          margin-right:8px;
+        }
+      }
+    }
+
+    .payments {
+      margin-bottom: 40px;
+      .header {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+
+    }
+    .policy {
+      text-decoration: none;
+      color:$black;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .lb-footer__center {
+      .header {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+      }
+      ul {
+        padding-top:20px;
+        padding-bottom: 40px;
+      }
+      a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color:$black;
+        text-decoration: none;
+      }
+      a:hover {
+        color:$blue;
+      }
+    }
+  }
+
+  .lb-footer__copyright {
+    text-align: center;
+    font-size: 12px;
+    line-height: 32px;
+    color: rgba(28, 28, 28, 0.3);
+    border-top:1px solid $gray;
+  }
+}
+
+@media (min-width: 760px) {
+  .lb-footer {
+    .lb-footer__content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .lb-footer__right {
+        width:184px;
+      }
+      .lb-footer__center {
+        flex-grow: 2;
+        margin: 0 20px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .lb-footer__left {
+
+      }
+    }
+  }
+}
+
+@media (min-width: 1020px) {
+  .lb-footer {
+    .lb-footer__content {
+      .lb-footer__center {
+        flex-grow: 2;
+        margin: 0 60px;
+        display: flex;
+        justify-content: space-around;
+
+        .goods-category {
+          width: 33.333%;
+        }
+
+        .other-menu {
+          display: flex;
+          justify-content: space-around;
+          width: 66.666%;
+        }
+      }
+    }
+  }
+}

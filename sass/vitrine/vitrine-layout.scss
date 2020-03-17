@@ -3,25 +3,22 @@
 
   .vitrine__banner {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 276px;
-    .header {
-      font-weight: 500;
-      font-size: 28px;
-      line-height: 36px;
-      text-align: center;
-      margin-top: 12px;
-      padding:0 20px;
-    }
+    height: 280px;
+    overflow: hidden;
     .image {
-      margin-top:auto;
+      text-align: center;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
       img {
-        height: 188px;
-        max-width: 90vw;
+        //display: none;
       }
+    }
+
+    .image.desktop {
+      display: none;
     }
   }
 
@@ -88,6 +85,7 @@
       .icons-block {
         justify-content: flex-start;
         margin-top: 16px;
+        height: 20px;
         .icon {
           margin-right: 20px;
         }
@@ -97,10 +95,12 @@
 
   .vitrine__sort {
     padding: 0 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
   .vitrine__seo {
+    max-width: 100%;
     padding: 0 20px;
     .header {
       font-weight: bold;
@@ -111,6 +111,9 @@
     .text {
       font-size: 14px;
       line-height: 20px;
+    }
+    p {
+      max-width: 100%;
     }
   }
   .vitrine__seo_second {
@@ -127,13 +130,7 @@
 @media (min-width: 400px) {
   .vitrine {
     .vitrine__banner {
-      height: 312px;
-      .image {
-        img {
-          height: 220px;
-          max-width: 90vw;
-        }
-      }
+      height: 280px;
     }
   }
 }
@@ -141,23 +138,16 @@
 @media (min-width: 760px) {
   .vitrine {
     .vitrine__banner {
-      height: 300px;
-      padding:0 20px;
-      flex-direction: row;
-      .header {
-        padding: 0px;
-        width: 360px;
-        text-align: left;
-        font-size: 32px;
-        line-height: 44px;
-      }
-      .image {
-        margin-top: 0px;
-        padding-right:50px;
+      padding: 0 20px;
+      height: 240px;
+      .image.desktop {
+        display: flex;
         img {
-          height: 100%;
-          max-width: 90vw;
+          max-height: 100%;
         }
+      }
+      .image.mobile {
+        display: none;
       }
     }
 
@@ -202,9 +192,10 @@
 @media (min-width: 1020px) {
   .vitrine {
     .vitrine__banner {
-      padding:0 40px;
+      padding: 0 20px;
+      height: 300px;
       .image {
-        padding-right:160px;
+
       }
     }
     .vitrine__goods {

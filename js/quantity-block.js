@@ -14,6 +14,7 @@ $(function() {
     });
 
     function updateQuantity(block, direction) {
+        var price = $(block).find(".quantity-price-item");
         var quantityElement = $(block).find(".quantity-number");
         var last_quantity = +$(quantityElement).attr("data-quantity");
         var new_quantity = +last_quantity;
@@ -22,6 +23,8 @@ $(function() {
         } else {
             new_quantity += direction;
         }
+        var new_price = new_quantity * + $(price).attr('data-one-item-price');
+        $(price).html(new_price + " ₽");
         $(quantityElement).attr({"data-quantity":new_quantity}).html(new_quantity);
     }
 
