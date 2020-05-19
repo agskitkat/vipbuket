@@ -5,7 +5,11 @@ function showModal(targetModal) {
 
 function hideModal(targetModal) {
     $("body").css({"overflow":"visible"});
-    $("#"+targetModal).removeClass("visible").addClass("hide");
+    $("#"+targetModal)
+        .removeClass("visible")
+        .addClass("hide")
+        .find('iframe')
+        .remove();
 }
 
 $(function() {
@@ -17,5 +21,12 @@ $(function() {
     $(".js-close-modal").click(function () {
         var targetModal = $(this).closest(".s-modal").attr("id");
         hideModal(targetModal);
+    });
+
+    $('.js-play-youtube').click(function () {
+        var dataVideo = $(this).attr("data-video");
+        $('.iframe-block').html('<iframe src="" allow="encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        $("#video-play").find("iframe").attr({'src': dataVideo});
+        showModal("video-play");
     });
 });

@@ -34,3 +34,17 @@
 .s-modal.hide {
   display: none;
 }
+
+.s-modal.s-video {
+  .s-modal-content {
+    min-width: 280px;
+    background: transparent;
+    height: initial;
+    width: initial;
+    iframe {
+      min-width: 280px;
+      width: 480px;
+      height: 360px;
+    }
+  }
+}

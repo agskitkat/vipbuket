@@ -1,0 +1,15 @@
+.slider-static-width.sopmod-block-2 {
+  .slick-next, .slick-prev {
+    top: 35%;
+  }
+  .slick-next {
+    left: initial;
+    right: 40px;
+    background-image: url(../images/svg/arrow-left-blue.svg);
+  }
+  .slick-prev {
+    background-image: url(../images/svg/arrow-right-blue.svg);
+    right: initial;
+    left: 40px;
+  }
+}

@@ -69,6 +69,6 @@ gulp.task('default', gulp.series('clean','sass', 'js', 'html', 'browser-sync', (
         gulp.series('js')
     );
     // Сборка html
-    gulp.watch(['html/*.html','html/*/*.html'], gulp.series('html'));
+    gulp.watch(['html/*.html','html/*/*.html', 'html/*/*/*.html'], gulp.series('html'));
     done();
 }));

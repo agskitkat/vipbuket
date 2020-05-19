@@ -1,8 +1,9 @@
 .slide {
-  height:200px;
-  background: #ECF9FE;
-  .container {
+  height:280px;
+  background: #FFF;
+  .container-1200 {
     position:relative;
+
     .text {
       font-size: 20px;
       line-height: 27px;
@@ -17,14 +18,29 @@
       right:0px;
       top:0px;
     }
+    .image-full {
+      position:relative;
+      text-align: center;
+      height:280px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        left: calc(50% - 380px);
+        margin: 0 auto;
+      }
+    }
   }
 }
 
-@media (min-width: 768px) {
+.after-slider {
+  padding-top:54px;
+}
+
+@media (min-width: 760px) {
   .slide {
-    height:250px;
+    height:240px;
     overflow: hidden;
-    .container {
+    .container-1200 {
       position:relative;
       .text {
         font-size: 36px;
@@ -39,6 +55,33 @@
         position:absolute;
         right:18%;
         top:0px;
+      }
+      .image-full {
+        position:relative;
+        text-align: center;
+        height:240px;
+        overflow: hidden;
+        img {
+          height:240px;
+          position: absolute;
+          left: calc(50% - 480px);
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide {
+    height:300px;
+    .container-1200 {
+      .image-full {
+        height:300px;
+        img {
+          height:300px;
+          left: calc(50% - 600px);
+        }
       }
     }
   }

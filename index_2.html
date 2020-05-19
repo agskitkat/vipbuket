@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VipBuket</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="production/style.min.css"/>
+    <script src="production/scripts.min.js"></script>
+</head>
+<body>
+<div class="container-1200">
+    <header class="header-lb">
+        <div class="mobile-lb">
+
+            <div class="top-line">
+                <a class="logo-link" href="/"><img class="just logo" src="../../images/logo.svg" alt=""></a>
+                <a class="phone" href="tel:8(499)347-07-97">8(499)347-07-97</a>
+            </div>
+
+            <div class="main-line">
+                <a href="#menu_0" class="header-ld-menu" data-target-menu="#menu">
+                    <img
+                            class="just"
+                            src="../../images/svg/menu-button-lb.svg"
+                            alt="">
+                </a>
+
+                <div class="header-search">
+                    <input class="header-search__input" placeholder="Поиск подарка" type="text">
+                    <button class="header-search__btn">Найти</button>
+                </div>
+
+                <a class="header-cart ">
+                    <span class="cart-count">1</span>
+                    <img class="just" src="../../images/svg/cart-icon-header.svg" alt="">
+                </a>
+            </div>
+
+        </div>
+        <div class="desktop-lb">
+            <div class="top-line">
+                <a class="logo-link" href="/">
+                    <img class="just logo" src="../../images/logo.svg" alt="">
+                </a>
+
+                <div class="menu-left">
+                    <a href="#">Оплата</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">Доставка</a>
+                </div>
+
+                <div class="menu-right">
+                    <span class="work-time">Ежедневно 09:00-18:00</span>
+                    <a href="#">Скидки</a>
+                    <a href="#">Новинки</a>
+                    <a href="#">Хит продаж</a>
+                </div>
+            </div>
+            <div class="main-header-block">
+                <div class="block-left">
+                    <div id="open-desktop-catalog-menu" class="open-catalog">
+                        <img src="../../images/svg/header-white-menu.svg" class="just open" alt="">
+                        <img src="../../images/svg/header-blue-menu-close.svg" class="just close" alt="">
+                        Каталог
+                    </div>
+                    <nav id="odcm" class="s-catalog-desktop">
+                        <ul class="top-level">
+                            <li>
+                                <a href="/">Цветы</a>
+                                <ul>
+                                    <li><a href="">Вкусный букет</a></li>
+                                    <li><a href="">Сладкий букет</a></li>
+                                    <li><a href="">Фруктовые букеты</a></li>
+                                    <li><a href="">Клубничные букеты</a></li>
+                                    <li><a href="">Мужской букет</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="">Вкусный букет</a></li>
+                                    <li><a href="">Сладкий букет</a></li>
+                                    <li><a href="">Фруктовые букеты</a></li>
+                                    <li><a href="">Клубничные букеты</a></li>
+                                    <li><a href="">Мужской букет</a></li>
+                                    <li><a href="">Вкусный букет</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="">Сладкий букет</a></li>
+                                    <li><a href="">Фруктовые букеты</a></li>
+                                    <li><a href="">Клубничные букеты</a></li>
+                                    <li><a href="">Мужской букет</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="">Вкусный букет</a></li>
+                                    <li><a href="">Сладкий букет</a></li>
+                                    <li><a href="">Фруктовые букеты</a></li>
+                                    <li><a href="">Клубничные букеты</a></li>
+                                    <li><a href="">Мужской букет</a></li>
+                                    <li><a href="">Вкусный букет</a></li>
+                                    <li><a href="">Сладкий букет</a></li>
+                                    <li><a href="">Фруктовые букеты</a></li>
+                                    <li><a href="">Клубничные букеты</a></li>
+                                    <li><a href="">Мужской букет</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="">Вкусный букет</a></li>
+                                    <li><a href="">Сладкий букет</a></li>
+                                    <li><a href="">Фруктовые букеты</a></li>
+                                    <li><a href="">Клубничные букеты</a></li>
+                                    <li><a href="">Мужской букет</a></li>
+                                    <li class="separator"></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/">Букеты</a>
+                                <ul>
+                                    <li><a href="">Фруктовые букеты</a></li>
+                                    <li><a href="">Клубничные букеты</a></li>
+                                    <li><a href="">Вкусный букет</a></li>
+                                    <li><a href="">Сладкий букет</a></li>
+                                    <li><a href="">Мужской букет</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="">Вкусный букет</a></li>
+                                    <li><a href="">Сладкий букет</a></li>
+                                    <li><a href="">Фруктовые букеты</a></li>
+                                </ul>
+                            </li>
+                            <li>Подарочные корзины</li>
+                            <li>Подарки</li>
+                            <li>Упаковка</li>
+                        </ul>
+                    </nav>
+                </div>
+                <a class="logo-link" href="/"><img class="just logo" src="../../images/logo.svg" alt=""></a>
+                <div class="block-right">
+
+                    <div class="phones">
+                        <a href="tel:8 (495) 005-18-47">8 (495) 005-18-47</a>
+                        <br>
+                        <a href="tel:8 (499) 347-07-97">8 (499) 347-07-97</a>
+                    </div>
+
+                    <div class="header-search">
+                        <input class="header-search__input" placeholder="Поиск подарка" type="text">
+                        <button class="header-search__btn">Найти</button>
+                    </div>
+
+                    <a class="header-cart">
+                        <span class="cart-count">1</span>
+                        <img class="just" src="../../images/svg/cart-icon-header.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<div class="s-catalog-mobile-menu">
+    <div class="menu-header">
+        <span>Меню</span><a href="#"><img class="just " src="../../images/svg/form-close.svg" alt=""></a>
+    </div>
+
+    <span class="menu-back-link">
+       <img class="just" src="../../images/svg/menu-sub-back-arrow.svg" alt="">
+    </span>
+
+    <div class="viewport">
+        <ul id="menu_viewport">
+
+        </ul>
+    </div>
+    <nav class="display-items-menu">
+        <ul id="menu_0">
+            <li>
+                <a href="#menu_1">Цветы</a>
+                <ul id="menu_1">
+                    <li><a href="">Вкусный букет</a></li>
+                    <li><a href="">Сладкий букет</a></li>
+                    <li><a href="">Фруктовые букеты</a></li>
+                    <li><a href="">Клубничные букеты</a></li>
+                    <li><a href="">Мужской букет</a></li>
+                    <li class="separator"></li>
+                    <li><a href="">Вкусный букет</a></li>
+                    <li><a href="">Сладкий букет</a></li>
+                    <li><a href="">Фруктовые букеты</a></li>
+                    <li><a href="">Клубничные букеты</a></li>
+                    <li><a href="">Мужской букет</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#menu_2">Букеты</a>
+                <ul id="menu_2">
+                    <li>
+                        <a href="#menu_2_1">Вкусный букет</a>
+                        <ul id="menu_2_1">
+                            <li><a href="">Вкусный букет</a></li>
+                            <li><a href="">Сладкий букет</a></li>
+                            <li><a href="">Фруктовые букеты</a></li>
+                            <li><a href="">Клубничные букеты</a></li>
+                            <li><a href="">Мужской букет</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Сладкий букет</a></li>
+                    <li><a href="">Фруктовые букеты</a></li>
+                    <li><a href="">Клубничные букеты</a></li>
+                    <li><a href="">Мужской букет</a></li>
+                    <li class="separator"></li>
+                    <li><a href="">Вкусный букет</a></li>
+                    <li><a href="">Сладкий букет</a></li>
+                    <li><a href="">Фруктовые букеты</a></li>
+                    <li><a href="">Клубничные букеты</a></li>
+                    <li><a href="">Мужской букет</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="slider">
+
+    <div class="slide">
+        <div class="container-1200">
+            <div class="image-full">
+                <img data-src="images/slider/2.png" data-srcset="images/slider/2.png 0w, images/slider/1.png 760w">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide">
+        <div class="container-1200">
+            <div class="image-full">
+                <img data-src="images/slider/2.png" data-srcset="images/slider/2.png 0w, images/slider/1.png 760w">
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="after-slider"></div>
+
+<div class="container-1200">
+    <section class="seotext">
+        <h1 class="header-main-page">Доставка букетов в Москве</h1>
+        <p class="p-main-page">Что может быть приятнее, чем счастье, радость в глазах близких людей? Оформленные с любовью и профессионализмом цветы несут самые искренние, душевные пожелания, наполняя сердце теплом, уютом и лучезарностью.</p>
+        <p class="p-main-page">В нашем флористическом магазине Вы найдете большой ассортимент оригинальных букетов на любой вкус. Каждый букет собирается и упаковывается бережно нашими флористами в ручную.  Своим клиентам мы предлагаем быструю доставку букетов к назначенному времени. На ваш выбор мы предлагаем следующие букеты:</p>
+    </section>
+
+    <div class="spc-btn-1-list">
+
+        <a href="#" class="spc-btn-1">
+            <img data-src="images/main/1.png" data-srcset="images/main/1.png 0w" alt="">
+            <div class="text">
+                <div class="name">
+                    Розы
+                </div>
+                <div class="price">
+                    от 2 390 ₽
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+        <a href="#" class="spc-btn-1">
+            <img data-src="images/main/1.png" data-srcset="images/main/1.png 0w" alt="">
+            <div class="text">
+                <div class="name">
+                    Розы
+                </div>
+                <div class="price">
+                    от 2 390 ₽
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+        <a href="#" class="spc-btn-1">
+            <img data-src="images/main/1.png" data-srcset="images/main/1.png 0w" alt="">
+            <div class="text">
+                <div class="name">
+                    Розы
+                </div>
+                <div class="price">
+                    от 2 390 ₽
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+        <a href="#" class="spc-btn-1">
+            <img data-src="images/main/1.png" data-srcset="images/main/1.png 0w" alt="">
+            <div class="text">
+                <div class="name">
+                    Розы
+                </div>
+                <div class="price">
+                    от 2 390 ₽
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+
+        <a href="#" class="spc-btn-1">
+            <img data-src="images/main/1.png" data-srcset="images/main/1.png 0w" alt="">
+            <div class="text">
+                <div class="name">
+                    Розы
+                </div>
+                <div class="price">
+                    от 2 390 ₽
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+        <a href="#" class="spc-btn-1">
+            <img data-src="images/main/1.png" data-srcset="images/main/1.png 0w" alt="">
+            <div class="text">
+                <div class="name">
+                    Розы
+                </div>
+                <div class="price">
+                    от 2 390 ₽
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+    </div>
+
+    <section class="seotext">
+        <p class="p-main-page">=Вместе с нашей мастерской вы имеете возможность порадовать любимых красивой, изысканной, незабываемой композицией из свежесрезанных ароматных цветов. Созданные с любовью и трепетом, оригинальные, эксклюзивные или традиционные, наши цветочные композиции проникают в самое сердце. В руках мастеров творится чудо, обязательно очаровывающее того, кому оно предназначается. Доставка букетов в Москве от компании «ЛентаБант» — счастье прямо в руки!</p>
+        <div class="header-main-page">Заказать букет цветов с доставкой в Москве</div>
+        <p class="p-main-page">Чтобы дарить радость — не нужен повод! В праздник можно превратить абсолютно любой день, стоит приложить совсем немного усилий и фантазии. Впрочем, всегда можно приурочить сюрприз к календарным, личным праздникам. Каждый будет выполнен с индивидуальными, творческими нотками, с учетом личных предпочтений заказчика, именинника. Мы осуществляем доставку букетов для любого вашего праздника:</p>
+    </section>
+
+    <div class="spc-btn-2-list">
+        <a href="#" class="spc-btn-2">
+            <div class="img-block">
+                <img data-src="images/main/bukety-na-8-marta.png" data-srcset="images/main/bukety-na-8-marta.png 0w" alt="">
+            </div>
+            <div class="text">
+                <div class="name">
+                    на 23 февраля
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+        <a href="#" class="spc-btn-2">
+            <div class="img-block">
+                <img data-src="images/main/bukety-na-8-marta.png" data-srcset="images/main/bukety-na-8-marta.png 0w" alt="">
+            </div>
+            <div class="text">
+                <div class="name">
+                    на 23 февраля
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+        <a href="#" class="spc-btn-2">
+            <div class="img-block">
+                <img data-src="images/main/bukety-na-8-marta.png" data-srcset="images/main/bukety-na-8-marta.png 0w" alt="">
+            </div>
+            <div class="text">
+                <div class="name">
+                    на 23 февраля
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+        <a href="#" class="spc-btn-2">
+            <div class="img-block">
+                <img data-src="images/main/bukety-na-8-marta.png" data-srcset="images/main/bukety-na-8-marta.png 0w" alt="">
+            </div>
+            <div class="text">
+                <div class="name">
+                    на 23 февраля
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+    </div>
+
+    <div class="good-slider good-slider_main-page">
+        <span class="header">
+            <img data-src="images/svg/pop-buket.svg" data-srcset="images/svg/pop-buket.svg 0w" alt="">
+        </span>
+        <div class="slider-static-width">
+            <div class="slider-slide">
+                <div class="slide-content micro-good">
+                    <img class="image just" data-lazy="images/good/good-2.png" src="images/good/good-2.png">
+                    
+                    <div class="icons-block">
+                        <div class="icon icon__sale">-20%</div>
+                        <div class="icon icon__new">Новинка</div>
+                        <div class="icon icon__hit">Хит продаж</div>
+                    </div>
+                    
+                    <div class="good-title">Вкусный букет из фруктов и роз «Красный бархат»</div>
+                    
+                    <div class="good-article">А1211</div>
+                    
+                    <div class="good-price-block">
+                        <span class="good-price">11 000 ₽</span>
+                        <span class="good-old-price">2 690 ₽</span>
+                    </div>
+                    
+                    <button class="good-add-to-cart s-btn s-btn_h40 s-btn_p12">В корзину</button>
+                </div>
+            </div>
+            <div class="slider-slide">
+                <div class="slide-content micro-good">
+                    <img class="image just" data-lazy="images/good/good-2.png" src="images/good/good-2.png">
+                    
+                    <div class="icons-block">
+                        <div class="icon icon__sale">-20%</div>
+                        <div class="icon icon__new">Новинка</div>
+                        <div class="icon icon__hit">Хит продаж</div>
+                    </div>
+                    
+                    <div class="good-title">Вкусный букет из фруктов и роз «Красный бархат»</div>
+                    
+                    <div class="good-article">А1211</div>
+                    
+                    <div class="good-price-block">
+                        <span class="good-price">11 000 ₽</span>
+                        <span class="good-old-price">2 690 ₽</span>
+                    </div>
+                    
+                    <button class="good-add-to-cart s-btn s-btn_h40 s-btn_p12">В корзину</button>
+                </div>
+            </div>
+            <div class="slider-slide">
+                <div class="slide-content micro-good">
+                    <img class="image just" data-lazy="images/good/good-2.png" src="images/good/good-2.png">
+                    
+                    <div class="icons-block">
+                        <div class="icon icon__sale">-20%</div>
+                        <div class="icon icon__new">Новинка</div>
+                        <div class="icon icon__hit">Хит продаж</div>
+                    </div>
+                    
+                    <div class="good-title">Вкусный букет из фруктов и роз «Красный бархат»</div>
+                    
+                    <div class="good-article">А1211</div>
+                    
+                    <div class="good-price-block">
+                        <span class="good-price">11 000 ₽</span>
+                        <span class="good-old-price">2 690 ₽</span>
+                    </div>
+                    
+                    <button class="good-add-to-cart s-btn s-btn_h40 s-btn_p12">В корзину</button>
+                </div>
+            </div>
+            <div class="slider-slide">
+                <div class="slide-content micro-good">
+                    <img class="image just" data-lazy="images/good/good-2.png" src="images/good/good-2.png">
+                    
+                    <div class="icons-block">
+                        <div class="icon icon__sale">-20%</div>
+                        <div class="icon icon__new">Новинка</div>
+                        <div class="icon icon__hit">Хит продаж</div>
+                    </div>
+                    
+                    <div class="good-title">Вкусный букет из фруктов и роз «Красный бархат»</div>
+                    
+                    <div class="good-article">А1211</div>
+                    
+                    <div class="good-price-block">
+                        <span class="good-price">11 000 ₽</span>
+                        <span class="good-old-price">2 690 ₽</span>
+                    </div>
+                    
+                    <button class="good-add-to-cart s-btn s-btn_h40 s-btn_p12">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="seotext">
+        <div class="header-main-page">
+            <img data-src="images/svg/pop-ukr.svg" data-srcset="images/svg/pop-ukr.svg" alt="">
+        </div>
+        <p class="p-main-page">Не имеете возможность лично вручить любимому человеку букет? И здесь мы Вам поможем! Вы сможете подарить частичку своего внимания даже тогда, когда находитесь далеко. Доставку букетов можно оформить заранее, в оговоренную дату и время, родной человек будет награжден подарком от вас.</p>
+
+        <p class="p-main-page">Дополните заказ загадочным посланием, признанием в любви, нежными пожеланиями в виде открытки или лаконичным украшением из натурального дерева, которые придадут вашему букету изысканность и шарм. И, конечно, важнейшим финальным штрихом в оформлении является упаковка. Вариантов огромное множество. Цветовое решение, фактуру и форму вы можете подобрать самостоятельно или довериться нашим профессиональным мастерам флористам. Заказать букет с доставкой Вы можете в классических вариантах: бумаге, пленке, фетре, сетке или оригинально преподнести в шляпной коробке, корзине, кашпо, вазе, дизайнерском деревянном ящике.</p>
+
+    </section>
+
+
+    <div class="spc-btn-2-list">
+        <a href="#" class="spc-btn-2">
+            <div class="img-block">
+                <img data-src="images/main/bukety-na-8-marta.png" data-srcset="images/main/bukety-na-8-marta.png 0w" alt="">
+            </div>
+            <div class="text">
+                <div class="name">
+                    на 23 февраля
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+        <a href="#" class="spc-btn-2">
+            <div class="img-block">
+                <img data-src="images/main/bukety-na-8-marta.png" data-srcset="images/main/bukety-na-8-marta.png 0w" alt="">
+            </div>
+            <div class="text">
+                <div class="name">
+                    на 23 февраля
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+        <a href="#" class="spc-btn-2">
+            <div class="img-block">
+                <img data-src="images/main/bukety-na-8-marta.png" data-srcset="images/main/bukety-na-8-marta.png 0w" alt="">
+            </div>
+            <div class="text">
+                <div class="name">
+                    на 23 февраля
+                </div>
+                <img class="back-arrow" data-src="images/svg/arrow.svg" data-srcset="images/svg/arrow.svg 0w" alt="">
+            </div>
+        </a>
+    </div>
+
+    <section class="seotext">
+        <div class="header-main-page">
+            <img data-src="images/svg/pop-buk-dos.svg" data-srcset="images/svg/pop-buk-dos.svg" alt="">
+        </div>
+        <p class="p-main-page">Желаете приобрести необычную или классическую композицию с бесплатной доставкой на дом по Москве? Наш интернет-магазин работает именно для вас!</p>
+        <p class="p-main-page">Выбирайте ценовой диапазон сюрприза, обращайте внимание на сезонность цветов! Недорогие (от 990 рублей) и шикарные, элитные вариации — качество всегда остается на высоте вне зависимости от предпочтений клиента.</p>
+        <p class="p-main-page">Стоимость доставки по Москве внутри МКАД: — бесплатно / с 8:00 — 23:00 Стоимость доставки по МО: — рассчитывается отдельно / с 9:00 — 22:00</p>
+        <p class="p-main-page">Хотите сохранить анонимность, придать загадочности презенту? Теплые пожелания доставим на дом или в офис конфиденциально!</p>
+        <p class="p-main-page">А еще приятная услуга доставка букетов доступна даже тогда, когда вы находитесь далеко от именинника! Хоть за океаном! Хотите словно лично побывать на вручении? Фото с получателем моментально будет отправлено в любой удобный для вас мессенджер. Современному подходу к решению вопроса приятности для любимого человека — да!</p>
+    </section>
+</div>
+
+        <footer class="lb-footer">
+            <div class="container-1200">
+                <div class="lb-footer__content">
+
+                    <div class="lb-footer__right">
+                        <a href="/">
+                            <img class="just lb-footer__logo" src="../../images/logo.svg" alt="">
+                        </a>
+                        <div class="work-time">Ежедневно 09:00-18:00</div>
+                        <div class="phone">8 (495) 005-18-47</div>
+                        <div class="phone">8 (499) 347-07-97</div>
+
+                        <div class="lb-footer__social">
+                            <div class="header">Присоединяйтесь к нам в социальных сетях</div>
+                            <div class="social__images">
+                                <a href="#"><img class="just" src="../../images/social/vk.png" alt=""></a>
+                                <a href="#"><img class="just" src="../../images/social/inst.png" alt=""></a>
+                                <a href="#"><img class="just" src="../../images/social/fb.png" alt=""></a>
+                                <a href="#"><img class="just" src="../../images/social/yt.png" alt=""></a>
+                                <a href="#"><img class="just" src="../../images/social/tw.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lb-footer__center">
+                        <div class="goods-category">
+
+                        </div>
+                        <div class="other-menu">
+
+                        </div>
+                    </div>
+
+                    <div class="lb-footer__left">
+                        <div class="payments">
+                            <div class="header">Способы оплаты</div>
+                            <img src="../../images/payments.png" alt="" class="just">
+                        </div>
+                        <a class="policy" href="#">
+                            Политика обработки<br>персональных данных
+                        </a>
+                    </div>
+
+                </div>
+                <div class="lb-footer__copyright">ЛентаБант© <?=date('Y')?>. Все права защищены</div>
+            </div>
+        </footer>
+    </body>
+    </html>

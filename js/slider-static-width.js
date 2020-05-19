@@ -7,6 +7,14 @@ $(function () {
         slidesToShow: 1,
         centerMode: false,
         variableWidth: true,
-        arrows: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 760,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
     });
 });

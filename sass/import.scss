@@ -59,6 +59,7 @@
 @import "vitrine/vitrine-layout";
 @import "vitrine/subcategory";
 @import "vitrine/sort";
+@import "vitrine/sopmod-block-2";
 
 @import "seotext";
 
@@ -73,3 +74,7 @@
 // ORDER
 @import "order/order-layout";
 @import "typo-elements/dotted-string-list";
+
+
+// Main page
+@import "main-page/special-buttons";

@@ -119,16 +119,21 @@ $slick-opacity-not-active: 0.75 !default;
 @media (min-width: 768px) {
     .slick-prev,
     .slick-next {
-        top: 85%;
+        //top: 85%;
     }
 }
 
 @media (min-width: 1024px) {
     .slick-prev {
-        left:calc(50% + 469px - 100px);
+        left:calc(50% + 480px - 100px);
     }
     .slick-next {
-        left:calc(50% + 469px - 40px);
+        left:calc(50% + 480px - 40px);
+    }
+
+    .slick-prev,
+    .slick-next {
+        top: 85%;
     }
 }
 

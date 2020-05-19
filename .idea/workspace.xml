@@ -2,31 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aace069-140a-4d28-b503-3392d67ae49f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/html/modules/lb_footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/descktop-catalog-menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/hashtag-menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/good-modules/back-link.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/header/catalog-descktop.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/header/catalog-menu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/header/header-cart.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/header/search.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/lb-footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/index_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/modules/new_index_page/seotext.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/modules/new_index_page/spc-btn-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/modules/new_index_page/spc-btn-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/modules/slider_index_page_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/main-page/special-buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/vitrine/sopmod-block-2.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/modules/header_l&amp;b.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/modules/header_l&amp;b.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/vitrine.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/vitrine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slider/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/slider/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slider/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/slider/2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/quantity-block.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/quantity-block.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/s-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/s-modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/slider-static-width.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/slider-static-width.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/production/scripts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/buttons/simple-button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/buttons/simple-button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/good-slider/slider-good.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/good-slider/slider-good.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/full-good/good-layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/full-good/good-layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/good-slider/good-slider-layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/good-slider/good-slider-layout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/header_l&amp;b.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/header_l&amp;b.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/import.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/import.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/modal/modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/modal/modal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/seotext.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/seotext.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/vitrine/subcategory.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/vitrine/subcategory.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/vitrine/vitrine-layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/vitrine/vitrine-layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vitrine.html" beforeDir="false" afterPath="$PROJECT_DIR$/vitrine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/slick-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/slick-theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/slider.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="D:/WorkOut/pirofirecore-1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -77,6 +77,10 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dev\vipbuket\html\modules\new_index_page" />
+      <recent name="D:\Dev\vipbuket\html\modules" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\W2\vipbuket_git\vipbuket\js\libs" />
       <recent name="D:\W2\vipbuket_git\vipbuket" />
@@ -147,6 +151,12 @@
       <workItem from="1581924818090" duration="964000" />
       <workItem from="1582011369169" duration="83289000" />
       <workItem from="1584081383983" duration="1013000" />
+      <workItem from="1584709098565" duration="7145000" />
+      <workItem from="1584948208000" duration="11217000" />
+      <workItem from="1585122184847" duration="651000" />
+      <workItem from="1586863274083" duration="7659000" />
+      <workItem from="1586938719543" duration="141000" />
+      <workItem from="1589891164736" duration="613000" />
     </task>
     <servers />
   </component>
