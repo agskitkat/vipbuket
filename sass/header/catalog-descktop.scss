@@ -1,7 +1,9 @@
+$topLevelWidth: 220px;
+
 .s-catalog-desktop {
   display: none;
-  background-color: $gray;
-  height:600px;
+  background: #FFF;
+  height:808px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   .top-level {
     box-sizing: border-box;
@@ -11,14 +13,14 @@
     font-weight: bold;
     font-size: 14px;
     color:$black;
-    height:600px;
+    height:808px;
     a {
       cursor: pointer;
       text-decoration: none;
       color:$black;
     }
     li {
-      padding-left:40px;
+      padding-left:20px;
       height: 28px;
       line-height: 28px;
       a {
@@ -27,6 +29,26 @@
 
       }
     }
+
+    ul {
+      background-color: #F8F8F8;
+      display: none;
+      width: calc(100% - #{$topLevelWidth});
+      left: $topLevelWidth;
+      top: 0px;
+      bottom:0px;
+      position: absolute;
+      padding:20px;
+      box-sizing: border-box;
+      z-index: 2;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      li {
+        height: 240px;
+        padding-bottom: 20px;
+      }
+    }
+    /* old layout
     ul {
       display: none;
       width: 70%;
@@ -49,22 +71,34 @@
         padding-left:0px;
       }
     }
+    */
   }
   .top-level {
     > li:hover {
-      background-color: #FFF;
+      background-color: #F8F8F8;
+      > a {
+        color: $blue;
+      }
+      > a:after {
+        content: ">";
+        margin-left:4px;
+      }
       ul {
         display: flex;
       }
     }
+  }
+
+  .spc-btn-1 .text .name {
+    margin-bottom: 4px;
   }
 }
 .s-catalog-desktop:after {
   content: "";
   background: #FFF;
   position: absolute;
-  width: 70%;
-  left: 30%;
+  width: calc(100% - #{$topLevelWidth});
+  left: $topLevelWidth;
   top: 0px;
   bottom:0px;
   z-index: 1;
@@ -73,5 +107,44 @@
 @media (min-width: 760px) {
   .s-catalog-desktop.open {
     display: block;
+  }
+}
+
+
+
+$topLevelWidth: 220px;
+@media (min-width: 1024px) {
+  .s-catalog-desktop {
+    .top-level {
+      ul {
+        width: calc(100% - #{$topLevelWidth});
+        left: $topLevelWidth;
+      }
+      ul li {
+        padding-left: 0px;
+        margin-right: 12px;
+      }
+      ul li:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+    .spc-btn-1 {
+      min-width: 180px;
+    }
+  }
+  .s-catalog-desktop:after {
+    width: calc(100% - #{$topLevelWidth});
+    left: $topLevelWidth;
+  }
+}
+
+$topLevelWidth: 220px;
+@media (min-width: 1200px) {
+  .s-catalog-desktop {
+    .top-level {
+      ul li {
+        height: 284px;
+      }
+    }
   }
 }

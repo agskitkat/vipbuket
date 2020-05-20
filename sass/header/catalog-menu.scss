@@ -4,35 +4,46 @@
   display: block;
   position: absolute;
   z-index: 100500;
-  background: #FFF;
+  //background: #FFF;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
   opacity: 0;
   transition: left 0.3s, opacity 0.3s;
+  background-color: #F8F8F8;
   .menu-header {
     height: 100px;
     line-height: 100px;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid $gray;font-weight: bold;
+    border-bottom: 1px solid $gray;
+    font-weight: bold;
     font-size: 20px;
     margin-bottom: 24px;
+    background: #FFF;
+  }
+
+  .flex-menu-btn {
+    display: flex;
   }
 
   .menu-back-link {
     display: block;
-    padding: 0px 20px;
+    // padding: 0px 20px;
+    padding-right: 12px;
     max-height:100px;
     overflow: hidden;
     opacity: 1;
-    transition: max-height 0.3s, opacity 0.3s;
+    max-width: 100px;
+    transition: max-height 0.3s, opacity 0.3s, max-width 0.3s, padding-right 0.3s;
   }
   .menu-back-link.hidden {
     opacity: 0;
     max-height:0px;
+    max-width: 0px;
+    padding-right: 0px;
   }
 
   .display-items-menu {
@@ -50,6 +61,7 @@
           font-size: 16px;
           line-height: 32px;
           color: $black;
+          margin-bottom: 20px;
         }
       }
     }

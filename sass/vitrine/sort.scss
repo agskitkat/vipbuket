@@ -11,6 +11,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    img {
+      margin-right:12px;
+    }
     .sort-hidden {
       display: none;
       position: absolute;
