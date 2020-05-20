@@ -74,38 +74,8 @@ $text5 = get_field( "text-5", $post->ID );
 				$img = get_field( 'circle-img', 'taxonomy_'.$cat);
 				//echo $cat;
 				
-				$posts = get_posts( 
-					array(
-						'post_type'   => 'buket',
-						'meta_type'   => 'CHAR',
-						'meta_key'	  => 'article',
-						'orderby'     => 'meta_value',
-						'order'       => 'ASC',
-						'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-						'tax_query' => array(
-							array(
-							  'taxonomy' => 'taxonomy',
-							  'field' => 'id',
-							  'terms' => $cat
-							)
-						)
-					) 
-				);
+				$real_price = get_low_price_of_category($cat);
 				
-				
-				$real_price = false;
-				foreach( $posts as $p ) {
-					//var_dump($p);
-					
-					$price = get_field( 'price', $p->ID);
-					if(!$real_price) {
-						$real_price = $price;
-					}
-					
-					if($real_price > $price) {
-						$real_price = $price;
-					}
-				}
 				
 				$term = get_term( $cat );
 				//print_r( $term );
@@ -118,7 +88,7 @@ $text5 = get_field( "text-5", $post->ID );
 							<?=$term->name?>
 						</div>
 						<div class="price">
-							от <?=$real_price?> ₽
+							от <?=nf($real_price)?> ₽
 						</div>
 						<img class="back-arrow" data-src="<?=get_template_directory_uri()?>/images/svg/arrow.svg" data-srcset="<?=get_template_directory_uri()?>/images/svg/arrow.svg 0w" alt="">
 					</div>
@@ -247,9 +217,9 @@ $text5 = get_field( "text-5", $post->ID );
 						<div class="good-article"><?=$article?></div>
 						
 						<div class="good-price-block">
-							<span class="good-price"><?=$price?> ₽</span>
+							<span class="good-price" style="<?=$sale?'':'color:#1c1c1c'?>"><?=nf($price)?> ₽</span>
 							<?if($sale) {?>
-								<span class="good-old-price"><?=$old_price?> ₽</span>
+								<span class="good-old-price"><?=nf($old_price)?> ₽</span>
 							<?}?>
 							
 						</div>

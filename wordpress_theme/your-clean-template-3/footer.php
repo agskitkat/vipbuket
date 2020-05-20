@@ -13,9 +13,9 @@
                 <div class="lb-footer__social">
                     <div class="header">Присоединяйтесь к нам в социальных сетях</div>
                     <div class="social__images">
-                        <a href="#"><img class="just" src="<?=get_template_directory_uri()?>/images/social/vk.png" alt=""></a>
-                        <a href="#"><img class="just" src="<?=get_template_directory_uri()?>/images/social/inst.png" alt=""></a>
-                        <a href="#"><img class="just" src="<?=get_template_directory_uri()?>/images/social/fb.png" alt=""></a>
+                        <a href="https://vk.com/dostavka_cvetov_v_moskve_77"><img class="just" src="<?=get_template_directory_uri()?>/images/social/vk.png" alt=""></a>
+                        <a href="https://www.instagram.com/lentaibant/"><img class="just" src="<?=get_template_directory_uri()?>/images/social/inst.png" alt=""></a>
+                        <a href="https://www.facebook.com/lentaibant/"><img class="just" src="<?=get_template_directory_uri()?>/images/social/fb.png" alt=""></a>
                         <a href="#"><img class="just" src="<?=get_template_directory_uri()?>/images/social/yt.png" alt=""></a>
                         <a href="#"><img class="just" src="<?=get_template_directory_uri()?>/images/social/tw.png" alt=""></a>
                     </div>

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aace069-140a-4d28-b503-3392d67ae49f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/production/scripts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/header/catalog-descktop.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/header/catalog-descktop.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/header/catalog-menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/header/catalog-menu.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/main-page/special-buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main-page/special-buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/seotext.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/seotext.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/vitrine/sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/vitrine/sort.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,6 +133,7 @@
       <workItem from="1586863274083" duration="7659000" />
       <workItem from="1586938719543" duration="141000" />
       <workItem from="1589891164736" duration="15508000" />
+      <workItem from="1589993366363" duration="293000" />
     </task>
     <servers />
   </component>

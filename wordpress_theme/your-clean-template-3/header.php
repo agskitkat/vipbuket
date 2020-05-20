@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?
-	$frontend = "0.10";
+	$frontend = "0.2";
 	$cart = new AgsssCart();
 	$summary = $cart->getCartSummary();
 ?>
@@ -98,9 +98,9 @@
 					</div>
 				</form>
                 <a href="/cart/" class="header-cart ">
-					<?if($summary['cart_count']){?>
-						<span class="cart-count"><?=$summary['cart_count']?></span>
-					<?}?>
+					<?//if($summary['cart_count']){?>
+						<span class="cart-count"><?=$summary['cart_count']?:0?></span>
+					<?//}?>
                     <img class="just" src="<?=get_template_directory_uri()?>/images/svg/cart-icon-header.svg" alt="">
                 </a>
             </div>
@@ -174,7 +174,8 @@
 						<?if($summary['cart_count']){?>
 							<span id="js-cart-count" class="cart-count"><?=$summary['cart_count']?></span>
 						<?} else {?>
-							<span id="js-cart-count" class="cart-count empty"></span>
+							<span id="js-cart-count" class="cart-count">0</span>
+							<? /* <span id="js-cart-count" class="cart-count empty">0</span> */ ?>
 						<?}?>
                         <img class="just" src="<?=get_template_directory_uri()?>/images/svg/cart-icon-header.svg" alt="">
                     </a>
@@ -186,12 +187,16 @@
 
 <div class="s-catalog-mobile-menu">
     <div class="menu-header">
-        <span>Меню</span><a href="#"><img class="just " src="<?=get_template_directory_uri()?>/images/svg/form-close.svg" alt=""></a>
+        <div class="flex-menu-btn">
+			<span class="menu-back-link">
+			   <img class="just" src="<?=get_template_directory_uri()?>/images/svg/menu-sub-back-arrow.svg" alt="">
+			</span>
+			Меню
+		</div>
+		<a href="#"><img class="just " src="<?=get_template_directory_uri()?>/images/svg/menu-close-gray.svg" alt=""></a>
     </div>
 
-    <span class="menu-back-link">
-       <img class="just" src="<?=get_template_directory_uri()?>/images/svg/menu-sub-back-arrow.svg" alt="">
-    </span>
+    
 
     <div class="viewport">
         <ul id="menu_viewport">

@@ -14,6 +14,9 @@ class AgsssCart {
 	// Получает корзину из куков
 	protected function get_cart() {
 		$cart = [];
+
+		//print_r($_COOKIE);
+
 		if( isset($_COOKIE[self::CART_COOKIE_NAME])) {
 			foreach ($_COOKIE[self::CART_COOKIE_NAME] as $name => $value) {
 				$name = htmlspecialchars($name);
@@ -27,11 +30,14 @@ class AgsssCart {
 		$this->sum = 0;
 		$this->old_sum = 0;
 		$this->sale_sum = 0;
+		$this->mass = 0;
 		
 		$result = $cart;
 		foreach($result as $good) {
 			$this->sum += $good['sum'];
 			$this->old_sum += $good['old_price_sum'];
+			
+			$this->mass += 500; //Масса в граммах
 			
 			if($good['sale'] > 0) {
 				$this->sale_sum += ($good['old_price_sum'] - $good['sum']);
@@ -59,19 +65,21 @@ class AgsssCart {
 		return [
 			"id" => $id,
 			"quantity" => $quantity,
-			"price" => nf($price),
-			"old_price" => nf($old_price),
-			"old_price_sum" => nf($quantity * $old_price),
+			"price" => $price,
+			"old_price" => $old_price,
+			"old_price_sum" => $quantity * $old_price,
 			"sale" => $sale,
 			"article" => $article,
 			"title" => $title,
-			"sum" => nf($quantity * $price),
-			"img" => $thumbnail[0]
+			"sum" => $quantity * $price,
+			"img" => $thumbnail[0],
+			"mass" => 500,
+			"url" => get_post_permalink($id)
 		];
 	}
 	
 	// Кладём в корзину товар $id количества $quantity
-	public function update($id, $quantity) {
+	public function update($id, $quantity, $method = false) {
 		$id = intval($id?:false);
 		$quantity = intval($quantity?:0);
 		
@@ -81,6 +89,13 @@ class AgsssCart {
 		}
 		
 		$result = [];
+		
+		if($method === "addition") {
+			//print_r($_COOKIE);
+			if(isset($_COOKIE[self::CART_COOKIE_NAME][$id])) {
+				$quantity += intval($_COOKIE[self::CART_COOKIE_NAME][$id]);
+			}
+		}
 		
 		if($quantity >= 1) {
 			setcookie(self::CART_COOKIE_NAME."[$id]", $quantity, time()+(3600*24), '/', $_SERVER['HTTP_HOST']);
@@ -104,11 +119,15 @@ class AgsssCart {
 		$this->cart = $result;	
 	}
 	
+	public function getItems() {
+		return $this->cart;
+	}
+	
 	// Печатаем json ответ
 	public function render($render = 'html') {
 		$sum = 0;
 		$old_sum = 0;
-		$sale_sum = 0; 
+		$sale_sum = 0;
 		$result = $this->cart;
 		foreach($result as $good) {
 			$sum += $good['sum'];
@@ -124,9 +143,9 @@ class AgsssCart {
 			echo '{"result":{
 				"staus":"ok", 
 				"message":"Корзина обновлена", 
-				"sum":"'.nf($sum).'", 
-				"old_sum":"'.nf($old_sum).'", 
-				"sale_sum":"'.nf($sale_sum).'", 
+				"sum":"'.agsss_nf($sum).'", 
+				"old_sum":"'.agsss_nf($old_sum).'", 
+				"sale_sum":"'.agsss_nf($sale_sum).'", 
 				"cart_count":"'.count($result).'",
 				"cart":'.json_encode($result).'}
 			}';
@@ -179,11 +198,11 @@ class AgsssCart {
 								<div class="flex-tablet">
 									<div class="item__price prices">
 										<div class="price_actual">
-											<?=nf($item['sum'])?> ₽
+											<?=agsss_nf($item['sum'])?> ₽
 										</div>
 										<div class="price_old-price">
 										<?if($item['old_price_sum']){?>
-											<?=nf($item['old_price_sum'])?> ₽
+											<?=agsss_nf($item['old_price_sum'])?> ₽
 										<?}?>
 										</div>
 									</div>
@@ -210,18 +229,18 @@ class AgsssCart {
 											<div data-good-id="<?=$id?>" class="js-action-good button increment">+</div>
 										</div>
 										<div class="price-by-one">
-											<?=nf($item['price'])?> руб. /<span class="measure">шт.</span>
+											<?=agsss_nf($item['price'])?> руб. /<span class="measure">шт.</span>
 										</div>
 									</div>
 								</div>
 
 								<div class="item__price prices display-desktop">
 									<div class="price_actual">
-										<?=nf($item['sum'])?> ₽
+										<?=agsss_nf($item['sum'])?> ₽
 									</div>
 									<div class="price_old-price">
 										<?if($item['old_price_sum']){?>
-											<?=nf($item['old_price_sum'])?> ₽
+											<?=agsss_nf($item['old_price_sum'])?> ₽
 										<?}?>
 									</div>
 								</div>
@@ -244,17 +263,17 @@ class AgsssCart {
                 <div class="summary__border">
                     <div class="flex-row">
                         <span>Товары (<?=count($cart)?>)</span>
-                        <span id="sum-old-price"><?=nf($old_sum)?> ₽</span>
+                        <span id="sum-old-price"><?=agsss_nf($old_sum)?> ₽</span>
                     </div>
                     <div class="flex-row">
                         <span>Скидка на товары</span>
-                        <span id="sum-sale" class="red"><?=nf($sale_sum)?> ₽</span>
+                        <span id="sum-sale" class="red"><?=agsss_nf($sale_sum)?> ₽</span>
                     </div>
                     
                     <div class="summary__line"></div>
                     <div class="flex-row flex-row__end">
                         <span>Итого</span>
-                        <span id="sum-price" class="price"><?=nf($sum)?> ₽</span>
+                        <span id="sum-price" class="price"><?=agsss_nf($sum)?> ₽</span>
                     </div>
                 </div>
 				<a href="/order/" class="summary__button">Перейти к оформлению</a>
@@ -271,6 +290,39 @@ class AgsssCart {
 			<?
 		}
 	}
+
+	public function getItemByCart($id) {
+		if(!isset($this->cart[$id])) {
+			return false;
+		}
+		
+		return $this->cart[$id];
+	}
+
+	public function getCartSummary() {
+		$sum = 0;
+		$old_sum = 0;
+		$sale_sum = 0;
+		$result = $this->cart;
+
+		foreach($result as $good) {
+			$sum += $good['sum'];
+			$old_sum += $good['old_price_sum'];
+			
+			if($good['sale'] > 0) {
+				$sale_sum += ($good['old_price_sum'] - $good['sum']);
+			}
+		}
+
+		return [
+			"sum" => $sum, 
+			"old_sum" => $old_sum, 
+			"sale_sum" => $sale_sum, 
+			"cart_count" => count($result),
+			"cart" => $result
+		];
+
+	}
 }
 
 
@@ -280,11 +332,9 @@ add_action( 'wp_ajax_nopriv_addTocart', 'add_to_cart' );  // wp_ajax_nopriv_{З�
 
 
 function add_to_cart() {
-	
 	$cart = new AgsssCart();
-	$cart->update($_POST['id'], $_POST['quantity']);
+	$cart->update($_POST['id'], $_POST['quantity'], $_POST['method']?$_POST['method']:false);
 	$cart->render('ajax');
-	
 	die();
 }
 ?>

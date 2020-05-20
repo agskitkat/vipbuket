@@ -28,8 +28,9 @@ get_header(); // подключаем header.php ?>
 	if(count($relationships)) {
 		foreach($relationships as $rid) {
 			$term = get_term( $rid, "taxonomy");
-			$image = get_field('kartinka_jelementa_svjazi',  "taxonomy_".$rid);
-			$sub_category[] = [$term->name, "/".$term->slug."/", $image];
+			//$image = get_field('kartinka_jelementa_svjazi',  "taxonomy_".$rid);
+			$image = get_field('circle-img',  "taxonomy_".$rid);
+			$sub_category[] = [$term->name, "/".$term->slug."/", $image, $rid];
 		}
 	} 
 
@@ -90,8 +91,53 @@ get_header(); // подключаем header.php ?>
 		</div>
 
 		<?if(count($sub_category)) {?>
-			<div class="vitrine__subcategory">
-				<?foreach($sub_category as $caterory) {?>
+			<? /*<div class="vitrine__subcategory"> */ ?>
+			<div class="spc-btn-1-list">
+				<?foreach($sub_category as $caterory) {
+					$cat = $caterory[3];
+					//var_dump($caterory);
+					$img = get_field( 'circle-img', 'taxonomy_'.$cat);
+					//echo $cat;
+					
+					$posts = get_posts( 
+						array(
+							'post_type'   => 'buket',
+							'meta_type'   => 'CHAR',
+							'meta_key'	  => 'article',
+							'orderby'     => 'meta_value',
+							'order'       => 'ASC',
+							'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+							'tax_query' => array(
+								array(
+								  'taxonomy' => 'taxonomy',
+								  'field' => 'id',
+								  'terms' => $cat
+								)
+							)
+						) 
+					);
+					
+					
+					$real_price = false;
+					foreach( $posts as $p ) {
+						//var_dump($p);
+						
+						$price = get_field( 'price', $p->ID);
+						if(!$real_price) {
+							$real_price = $price;
+						}
+						
+						if($real_price > $price) {
+							$real_price = $price;
+						}
+					}
+					
+					$term = get_term( $cat );
+					//print_r( $term );
+		
+				?>
+			
+					<? /* 
 					<a href="<?=$caterory[1]?>" class="subcategory">
 						<div class="image">
 							<img 
@@ -101,7 +147,22 @@ get_header(); // подключаем header.php ?>
 						</div>
 						<div class="text"><?=$caterory[0]?></div>
 					</a>
+					*/ ?>
+					
+					<a href="/<?=$term->slug?>/" class="spc-btn-1">
+						<img data-src="<?=$img?>" data-srcset="<?=$img?> 0w" alt="">
+						<div class="text">
+							<div class="name"> 
+								<?=$term->name?>
+							</div>
+							<div class="price">
+								от <?=nf($real_price)?> ₽
+							</div>
+							<img class="back-arrow" data-src="<?=get_template_directory_uri()?>/images/svg/arrow.svg" data-srcset="<?=get_template_directory_uri()?>/images/svg/arrow.svg 0w" alt="">
+						</div>
+					</a>
 				<?}?>
+			<? /* </div> */ ?>
 			</div>
 		<?}?>
 
@@ -119,7 +180,7 @@ get_header(); // подключаем header.php ?>
 			<div class="vitrine__sort sort-block">
 
 				<div class="sort">
-					Фильтры
+					<img data-src="<?=get_template_directory_uri()?>/images/svg/sitings.svg" data-srcset="<?=get_template_directory_uri()?>/images/svg/sitings.svg 0w"><span>Сортировка</span>
 					<div class="sort-hidden">
 						<a href="?order=DESC" class="<?=$active_desc?>">По цене (убыв.)</a>
 						<a href="?order=ASC" class="<?=$active_asc?>">По цене (возр.)</a>
@@ -231,9 +292,9 @@ get_header(); // подключаем header.php ?>
 					<div class="good-article"><?=$article?></div>
 
 					<div class="good-price-block">
-						<span class="good-price"><?=$price?> ₽</span>
+						<span class="good-price" style="<?=$sale?'':'color:#1c1c1c'?>"><?=nf($price)?> ₽</span>
 						<?if($old_price) {?>
-							<span class="good-old-price"><?=$old_price?> ₽</span>
+							<span class="good-old-price"><?=nf($old_price)?> ₽</span>
 						<?}?>
 					</div>
 
@@ -320,9 +381,9 @@ get_header(); // подключаем header.php ?>
 							<div class="good-article">А1211</div>
 
 							<div class="good-price-block">
-								<span class="good-price"><?=$price?> ₽</span>
+								<span class="good-price"><?=nf($price)?> ₽</span>
 								<?if($old_price) {?>
-									<span class="good-old-price"><?=$old_price?> ₽</span>
+									<span class="good-old-price"><?=nf($old_price)?> ₽</span>
 								<?}?>
 							</div>
 

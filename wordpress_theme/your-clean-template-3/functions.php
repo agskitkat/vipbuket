@@ -389,7 +389,7 @@ function view_category($id = 0, $count = 9, $name = "") {
 			<div class="good-wrap">
 				<div class="good">
 						<div class="options">';
-						$str .= $old_price ? '<div class="sale">-'.$sale.'%</div>':'';
+						$str .= $old_price ? '<div class="sale">-'.$sale.'%</div>' : '';
 						$str .= $hit?'<div class="hit">Хит</div>':'';
 					 $str .= '</div>
 					<div class="video-desktop desktop-only js-target-view-video" data-video="'.$video.'">
@@ -417,9 +417,9 @@ function view_category($id = 0, $count = 9, $name = "") {
 						</div>
 						<div class="price-to-cart">
 							<div class="prices">
-								<span class="price'.($old_price?' red':'').'">'.$price.' ₽</span>
+								<span class="price'.($old_price?' red':'').'"  style="'.$old_price?'':'color:#1c1c1c'.'">'.nf($price).' ₽</span>
 								';
-								$str .= $old_price?'<span class="old-price">'.$old_price.' ₽</span>':'';
+								$str .= $old_price?'<span class="old-price">'.nf($old_price).' ₽</span>':'';
 							$str .= '
 							</div>
 							<div class="to-cart" data-good-id="'.$id.'">
@@ -438,7 +438,7 @@ function view_category($id = 0, $count = 9, $name = "") {
 								'.$article.'
 							</div>
 							<div class="article-line__old-price">';
-								$str .= $old_price?'<span class="old-price">'.$old_price.' ₽</span>':'';
+								$str .= $old_price?'<span class="old-price">'.nf($old_price).' ₽</span>':'';
 							$str .= '</div>
 						</div>
 
@@ -447,7 +447,7 @@ function view_category($id = 0, $count = 9, $name = "") {
 								'.get_the_title($id).'
 							</a>
 							<div class="name-line__price'.($old_price?' red':'').'">
-								'.$price.' ₽
+								'.nf($price).' ₽
 							</div>
 						</div>
 
@@ -594,12 +594,38 @@ class True_Walker_Nav_Menu extends Walker_Nav_Menu {
 			$item_output .= $args->after;
 			
 		} else {
+			$image = get_field('circle-img', "taxonomy_".$item->object_id);
+			
+			if(!$image ) {
+				$image = get_field('circle-img', $item->object_id);
+				//var_dump($image);
+			}
+			
+			$real_price = get_low_price_of_category($item->object_id);
+			
 			
 			$item_output = $args->before;
-			$item_output .= '<a'. $attributes .'>';
+			$item_output .= '<a class="spc-btn-1" '. $attributes .'>';
+			
+			$item_output .= '
+			<img data-src="'.$image.'" data-srcset="'.$image.' 0w" alt="">
+			<div class="text">
+				<div class="name">';
 			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+			$item_output .= '</div>';
+			
+			if($real_price) {
+				$item_output .= '	<div class="price">
+					от '.nf($real_price).' ₽
+				</div>';
+			}
+			$item_output .= '	<img class="back-arrow" data-src="'.get_template_directory_uri().'/images/svg/arrow.svg" data-srcset="'.get_template_directory_uri().'/images/svg/arrow.svg 0w" alt="">
+			</div>';
+			
 			$item_output .= '</a>';
 			$item_output .= $args->after;
+			
+			
 
 		}
  
@@ -685,9 +711,39 @@ class mobile_Walker_Nav_Menu extends Walker_Nav_Menu {
 			
 		} else {
 			
-			$item_output = $args->before;
+			/* $item_output = $args->before;
 			$item_output .= '<a'. $attributes .'>';
 			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+			$item_output .= '</a>';
+			$item_output .= $args->after; */
+			
+			$image = get_field('circle-img',  "taxonomy_".$item->object_id);
+			if(!$image ) {
+				$image = get_field('circle-img', $item->object_id);
+				//var_dump($image);
+			}
+			
+			$real_price = get_low_price_of_category($item->object_id);
+			
+			
+			$item_output = $args->before;
+			$item_output .= '<a class="spc-btn-1" '. $attributes .'>';
+			
+			$item_output .= '
+			<img data-src="'.$image.'" data-srcset="'.$image.' 0w" alt="">
+			<div class="text">
+				<div class="name">';
+			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+			$item_output .= '</div>';
+			
+			if($real_price) {
+				$item_output .= '	<div class="price">
+					от '.nf($real_price).' ₽
+				</div>';
+			}
+			$item_output .= '	<img class="back-arrow" data-src="'.get_template_directory_uri().'/images/svg/arrow.svg" data-srcset="'.get_template_directory_uri().'/images/svg/arrow.svg 0w" alt="">
+			</div>';
+			
 			$item_output .= '</a>';
 			$item_output .= $args->after;
 
@@ -911,7 +967,7 @@ function test_function(){
 	$good .= "<img src='".$_POST['item']['img'] . "' style='width:200px;'><br><br>";
 	$good .= $_POST['item']['name'] . "<br>";
 	$good .= $_POST['item']['article'] . "<br>";
-	$good .= $_POST['item']['price'] . "<br><br>";
+	$good .= nf($_POST['item']['price']) . "<br><br>";
 	
 
 	$mail_body .= "Имя: " .  $arPost['user_name'] . "<br>";
@@ -936,7 +992,7 @@ function test_function(){
 	$good .= "<img src='".$_POST['item']['img'] . "' style='width:200px;'><br><br>";
 	$good .= $_POST['item']['name'] . " ";
 	$good .= $_POST['item']['article'] . " ";
-	$good .= "<br><b>" . $_POST['item']['price'] . "</b><br><br>";
+	$good .= "<br><b>" . nf($_POST['item']['price']) . "</b><br><br>";
 	$price = intval($_POST['item']['price']);
 	
 	$mail_body = "Адрес доставки: " .  $arPost['user_addr'] . "<br>";
@@ -955,7 +1011,7 @@ function test_function(){
 	}
 	
 	if($price > intval($_POST['item']['price'])) {
-		$decoration .= "<b>ИТОГО: " . $price . " ₽</b><br><br>";
+		$decoration .= "<b>ИТОГО: " . nf($price) . " ₽</b><br><br>";
 	}
 	
 	$b = str_replace("#WORK_AREA#", ($greeting . "" . $good . "" . $decoration . "" . $mail_body), $mail);
@@ -1122,4 +1178,52 @@ function add_event_table_filters_handler( $query ) {
 
 }
 
+
+
+function get_low_price_of_category($cat) {
+
+	// Получить низшую цену в категории(taxonomy) 
+	$posts = get_posts( 
+		array(
+			'posts_per_page'	=> -1,
+			'post_type'   => 'buket',
+			'order'       => 'ASC',
+			'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+			'tax_query' => array(
+				array(
+				  'taxonomy' => 'taxonomy',
+				  'field' => 'id',
+				  'terms' => $cat,
+				  'operator' => 'IN'
+				)
+			)
+		)  
+	);
+	$real_price = false;
+	foreach( $posts as $p ) {
+		//var_dump($p);
+		$price = get_field( 'price', $p->ID);
+		
+		/* if($cat == 3) {
+			var_dump($p->ID);
+		  var_dump($price);
+		} */
+		
+		
+		if(!$real_price) {
+			$real_price = $price;
+		}
+		
+		if($real_price > $price) {
+			$real_price = $price;
+		}
+	}
+
+	return $real_price;
+}
+
+
+function nf($n) {
+	return number_format(+$n, 0, '', ' ');
+}
 ?>

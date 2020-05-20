@@ -154,9 +154,9 @@ get_header(); // подключаем header.php ?>
 					<div class="good-article"><?=$article?></div>
 
 					<div class="good-price-block">
-						<span class="good-price"><?=$price?> ₽</span>
+						<span class="good-price"><?=nf($price)?> ₽</span>
 						<?if($sale){?>
-							<span class="good-old-price"><?=$old_price?> ₽</span>
+							<span class="good-old-price"><?=nf($old_price)?> ₽</span>
 						<?}?>
 					</div>
 
@@ -167,7 +167,7 @@ get_header(); // подключаем header.php ?>
 							<div data-quantity="1" class="quantity-number">1</div>
 							<button class="js-increment s-btn s-btn_block s-btn_h40 s-btn_control">+</button>
 						</div>
-						<div class="quantity-price-item" data-one-item-price="<?=$price?>"><?=$price?> ₽</div>
+						<div class="quantity-price-item" data-one-item-price="<?=$price?>"><?=nf($price)?> ₽</div>
 					</div>
 
 					<div class="good-add-block">
