@@ -7,7 +7,7 @@
     "gulp-clean": "^0.4.0",
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-inline-css": "^3.5.0",
+    "gulp-inline-css": "^4.0.0",
     "gulp-js-minify": "^0.0.3",
     "gulp-minify-css": "^1.2.4",
     "gulp-pagebuilder": "^0.1.4",
